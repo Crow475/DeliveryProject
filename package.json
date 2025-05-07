@@ -1,0 +1,18 @@
+{
+  "name": "delivery",
+  "version": "0.0.1",
+  "description": "Food delivery service website",
+  "main": "/src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "crow475",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "3.5.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.5",
+    "tailwindcss": "^4.1.5"
+  }
+}
