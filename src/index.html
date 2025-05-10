@@ -6,7 +6,40 @@
         <link href="./styles.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="container">
+        <div class="container p-1">
+            <nav
+                class="mx-4 my-1 flex flex-row justify-between rounded-4xl bg-gray-200 px-2 py-2"
+            >
+                <ul class="mx-3 flex flex-row justify-start space-x-3 text-xl">
+                    <li>
+                        <a> Home </a>
+                    </li>
+                    <li>
+                        <a> Catalog </a>
+                    </li>
+                    <li>
+                        <a> About </a>
+                    </li>
+                </ul>
+                <div class="flex flex-row space-x-2">
+                    <button class="rounded-4xl bg-gray-500 p-2">
+                        <img
+                            src="./search.svg"
+                            width="16"
+                            height="16"
+                            class="invert"
+                        />
+                    </button>
+                    <button class="rounded-4xl bg-gray-500 p-2">
+                        <img
+                            src="./shopping-cart.svg"
+                            width="16"
+                            height="16"
+                            class="invert"
+                        />
+                    </button>
+                </div>
+            </nav>
             <h1 class="text-3xl text-blue-700">Test</h1>
         </div>
     </body>
