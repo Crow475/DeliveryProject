@@ -4,43 +4,304 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./styles.css" rel="stylesheet" />
+        <link rel="icon" type="image/svg+xml" href="/logo_color.svg" />
+        <title>Foodelivery</title>
     </head>
     <body>
-        <div class="container p-1">
-            <nav
-                class="mx-4 my-1 flex flex-row justify-between rounded-4xl bg-gray-200 px-2 py-2"
+        <nav id="navbar">
+            <ul
+                class="mx-3 flex flex-row items-center justify-start space-x-3 text-xl"
             >
-                <ul class="mx-3 flex flex-row justify-start space-x-3 text-xl">
-                    <li>
-                        <a> Home </a>
+                <li>
+                    <a href="/">
+                        <img src="./logo_full.svg" class="w-32" />
+                    </a>
+                </li>
+                <li>
+                    <a> Catalog </a>
+                </li>
+                <li>
+                    <a href="/about"> About </a>
+                </li>
+            </ul>
+            <div class="flex flex-row space-x-2">
+                <button class="rounded-4xl bg-gray-500 p-2">
+                    <img
+                        src="./icons/shopping-cart.svg"
+                        width="16"
+                        height="16"
+                        class="invert select-none"
+                    />
+                </button>
+                <button
+                    class="cursor-pointer rounded-4xl bg-gray-500 p-2"
+                    id="themeSwitchButton"
+                >
+                    <img
+                        src="./icons/sun.svg"
+                        width="16"
+                        height="16"
+                        class="invert select-none"
+                        id="themeSwitchIcon"
+                    />
+                </button>
+                <div
+                    class="absolute top-14 right-4 hidden min-w-32 rounded-xl bg-neutral-300 p-2 text-lg"
+                    id="themeSwitchDropdown"
+                >
+                    <ul class="flex flex-col space-y-2">
+                        <li>
+                            <label
+                                class="flex cursor-pointer flex-row items-center justify-between space-x-2 rounded-3xl px-2"
+                                for="themeSwitch-auto"
+                            >
+                                <div
+                                    class="flex flex-row items-center justify-start space-x-2"
+                                >
+                                    <img
+                                        src="./icons/sun-moon.svg"
+                                        width="20"
+                                        height="20"
+                                        class="select-none"
+                                    />
+                                    <span>Auto</span>
+                                </div>
+                                <input
+                                    type="radio"
+                                    name="themeSwitch"
+                                    id="themeSwitch-auto"
+                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
+                                    onclick="resetTheme()"
+                                />
+                            </label>
+                        </li>
+                        <li>
+                            <label
+                                class="flex cursor-pointer flex-row items-center justify-between space-x-2 rounded-3xl px-2"
+                                for="themeSwitch-light"
+                            >
+                                <div
+                                    class="flex flex-row items-center justify-start space-x-2"
+                                >
+                                    <img
+                                        src="./icons/sun.svg"
+                                        width="20"
+                                        height="20"
+                                        class="select-none"
+                                    />
+                                    <span class="select-none">Light</span>
+                                </div>
+                                <input
+                                    type="radio"
+                                    name="themeSwitch"
+                                    id="themeSwitch-light"
+                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
+                                    onclick="setTheme('light')"
+                                />
+                            </label>
+                        </li>
+                        <li>
+                            <label
+                                class="flex cursor-pointer flex-row items-center justify-between space-x-2 rounded-3xl px-2"
+                                for="themeSwitch-dark"
+                            >
+                                <div
+                                    class="flex flex-row items-center justify-start space-x-2"
+                                >
+                                    <img
+                                        src="./icons/moon.svg"
+                                        width="20"
+                                        height="20"
+                                        class="select-none"
+                                    />
+                                    <span class="select-none">Dark</span>
+                                </div>
+                                <input
+                                    type="radio"
+                                    name="themeSwitch"
+                                    id="themeSwitch-dark"
+                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
+                                    onclick="setTheme('dark')"
+                                />
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container p-1">
+            <main>
+                <div
+                    class="relative flex h-[70vh] flex-col items-center justify-center"
+                >
+                    <h1 class="text-6xl">
+                        Your favourite food right at your doorstep!
+                    </h1>
+                </div>
+                <ul class="flex flex-row items-center justify-center space-x-4">
+                    <li
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                    >
+                        <div
+                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-orange-400 p-3"
+                        >
+                            <img
+                                src="./icons/hamburger.svg"
+                                width="96"
+                                height="96"
+                                class="invert select-none"
+                            />
+                        </div>
+                        <div class="flex w-full flex-col px-4 py-3">
+                            <div class="flex w-full flex-row justify-between">
+                                <span class="text-xl">Fast Food</span>
+                                <img
+                                    src="./icons/chevron-right.svg"
+                                    width="16"
+                                    height="16"
+                                    class="select-none"
+                                />
+                            </div>
+                            <p>
+                                Burgers, fries, and more, delivered fast and
+                                hot.
+                            </p>
+                        </div>
                     </li>
-                    <li>
-                        <a> Catalog </a>
+                    <li
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                    >
+                        <div
+                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-red-500 p-3"
+                        >
+                            <img
+                                src="./icons/pizza.svg"
+                                width="96"
+                                height="96"
+                                class="invert select-none"
+                            />
+                        </div>
+                        <div class="flex w-full flex-col px-4 py-3">
+                            <div class="flex w-full flex-row justify-between">
+                                <span class="text-xl">Pizza</span>
+                                <img
+                                    src="./icons/chevron-right.svg"
+                                    width="16"
+                                    height="16"
+                                    class="select-none"
+                                />
+                            </div>
+                            <p>Delicious pizzas with for the whole company.</p>
+                        </div>
                     </li>
-                    <li>
-                        <a> About </a>
+                    <li
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                    >
+                        <div
+                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-yellow-400 p-3"
+                        >
+                            <img
+                                src="./icons/egg-fried.svg"
+                                width="96"
+                                height="96"
+                                class="invert select-none"
+                            />
+                        </div>
+                        <div class="flex w-full flex-col px-4 py-3">
+                            <div class="flex w-full flex-row justify-between">
+                                <span class="text-xl">Breakfast</span>
+                                <img
+                                    src="./icons/chevron-right.svg"
+                                    width="16"
+                                    height="16"
+                                    class="select-none"
+                                />
+                            </div>
+                            <p>Start your day with a delicious breakfast.</p>
+                        </div>
+                    </li>
+                    <li
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                    >
+                        <div
+                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-lime-400 p-3"
+                        >
+                            <img
+                                src="./icons/leaf.svg"
+                                width="96"
+                                height="96"
+                                class="invert select-none"
+                            />
+                        </div>
+                        <div class="flex w-full flex-col px-4 py-3">
+                            <div class="flex w-full flex-row justify-between">
+                                <span class="text-xl">Vegan</span>
+                                <img
+                                    src="./icons/chevron-right.svg"
+                                    width="16"
+                                    height="16"
+                                    class="select-none"
+                                />
+                            </div>
+                            <p>Healthy and delicious vegan options.</p>
+                        </div>
+                    </li>
+                    <li
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                    >
+                        <div
+                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-orange-800 p-3"
+                        >
+                            <img
+                                src="./icons/croissant.svg"
+                                width="96"
+                                height="96"
+                                class="invert select-none"
+                            />
+                        </div>
+                        <div class="flex w-full flex-col px-4 py-3">
+                            <div class="flex w-full flex-row justify-between">
+                                <span class="text-xl">Bakery</span>
+                                <img
+                                    src="./icons/chevron-right.svg"
+                                    width="16"
+                                    height="16"
+                                    class="select-none"
+                                />
+                            </div>
+                            <p>Freshly baked goods delivered to you.</p>
+                        </div>
+                    </li>
+                    <li
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                    >
+                        <div
+                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-pink-400 p-3"
+                        >
+                            <img
+                                src="./icons/cake-slice.svg"
+                                width="96"
+                                height="96"
+                                class="invert select-none"
+                            />
+                        </div>
+                        <div class="flex w-full flex-col px-4 py-3">
+                            <div class="flex w-full flex-row justify-between">
+                                <span class="text-xl">Desserts</span>
+                                <img
+                                    src="./icons/chevron-right.svg"
+                                    width="16"
+                                    height="16"
+                                    class="select-none"
+                                />
+                            </div>
+                            <p>Sweet treats to satisfy your cravings.</p>
+                        </div>
                     </li>
                 </ul>
-                <div class="flex flex-row space-x-2">
-                    <button class="rounded-4xl bg-gray-500 p-2">
-                        <img
-                            src="./search.svg"
-                            width="16"
-                            height="16"
-                            class="invert"
-                        />
-                    </button>
-                    <button class="rounded-4xl bg-gray-500 p-2">
-                        <img
-                            src="./shopping-cart.svg"
-                            width="16"
-                            height="16"
-                            class="invert"
-                        />
-                    </button>
-                </div>
-            </nav>
-            <h1 class="text-3xl text-blue-700">Test</h1>
+            </main>
         </div>
+        <script src="./themeSwitcher.js"></script>
+        <script src="./navbar.js"></script>
     </body>
 </html>
