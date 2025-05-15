@@ -7,26 +7,42 @@ window.addEventListener("DOMContentLoaded", function () {
             lighten();
         }
 
-        this.document.getElementById("themeSwitch-auto").checked = true;
+        document.getElementById("themeSwitch-auto").checked = true;
     }
 
     if (localStorage.getItem("theme") === "dark") {
         darken();
-        this.document.getElementById("themeSwitch-dark").checked = true;
+        document.getElementById("themeSwitch-dark").checked = true;
     } else if (localStorage.getItem("theme") === "light") {
         lighten();
-        this.document.getElementById("themeSwitch-light").checked = true;
+        document.getElementById("themeSwitch-light").checked = true;
     }
+
+    const themeSwitchDark = document.getElementById("themeSwitch-dark");
+    const themeSwitchLight = document.getElementById("themeSwitch-light");
+    const themeSwitchAuto = document.getElementById("themeSwitch-auto");
+
+    themeSwitchDark.addEventListener("click", function (event) {
+        setTheme("dark");
+    });
+
+    themeSwitchLight.addEventListener("click", function (event) {
+        setTheme("light");
+    });
+
+    themeSwitchAuto.addEventListener("click", function (event) {
+        resetTheme();
+    });
 });
 
 function setTheme(theme) {
     if (theme === "dark") {
         localStorage.setItem("theme", "dark");
-        this.document.getElementById("themeSwitch-dark").checked = true;
+        document.getElementById("themeSwitch-dark").checked = true;
         darken();
     } else if (theme === "light") {
         localStorage.setItem("theme", "light");
-        this.document.getElementById("themeSwitch-light").checked = true;
+        document.getElementById("themeSwitch-light").checked = true;
         lighten();
     }
 }
@@ -37,7 +53,7 @@ function resetTheme() {
     root.classList.remove("dark");
     localStorage.removeItem("theme");
 
-    this.document.getElementById("themeSwitch-auto").checked = true;
+    document.getElementById("themeSwitch-auto").checked = true;
 
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         darken();

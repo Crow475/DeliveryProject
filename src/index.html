@@ -8,8 +8,6 @@
         <title>Foodelivery</title>
     </head>
     <body>
-        <script src="./themeSwitcher.js" type="module"></script>
-        <script src="./navbar.js" type="module"></script>
         <nav id="navbar">
             <ul
                 class="mx-3 flex flex-row items-center justify-start space-x-3 text-xl"
@@ -73,7 +71,6 @@
                                     name="themeSwitch"
                                     id="themeSwitch-auto"
                                     class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
-                                    onclick="resetTheme()"
                                 />
                             </label>
                         </li>
@@ -98,7 +95,6 @@
                                     name="themeSwitch"
                                     id="themeSwitch-light"
                                     class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
-                                    onclick="setTheme('light')"
                                 />
                             </label>
                         </li>
@@ -123,7 +119,6 @@
                                     name="themeSwitch"
                                     id="themeSwitch-dark"
                                     class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
-                                    onclick="setTheme('dark')"
                                 />
                             </label>
                         </li>
@@ -303,5 +298,7 @@
                 </ul>
             </main>
         </div>
+        <script src="./themeSwitcher.js" type="module"></script>
+        <script src="./navbar.js" type="module"></script>
     </body>
 </html>
