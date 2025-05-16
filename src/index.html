@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="./styles.css" rel="stylesheet" />
         <link rel="icon" type="image/svg+xml" href="/logo_color.svg" />
-        <title>Foodelivery</title>
+        <title>FoodRocket | Food delivered fast</title>
     </head>
     <body>
         <nav id="navbar">
@@ -14,14 +14,21 @@
             >
                 <li>
                     <a href="/">
-                        <img src="./logo_full.svg" class="w-32" />
+                        <img
+                            src="./logo_full.svg"
+                            class="block w-32 dark:hidden"
+                        />
+                        <img
+                            src="./logo_full_white.svg"
+                            class="hidden w-32 dark:block"
+                        />
                     </a>
                 </li>
                 <li>
-                    <a> Catalog </a>
+                    <a>Catalog</a>
                 </li>
                 <li>
-                    <a href="/about"> About </a>
+                    <a href="/about">About</a>
                 </li>
             </ul>
             <div class="flex flex-row space-x-2">
@@ -46,9 +53,10 @@
                     />
                 </button>
                 <div
-                    class="absolute top-14 right-4 hidden min-w-32 rounded-xl bg-neutral-300 p-2 text-lg"
+                    class="absolute top-14 right-4 hidden min-w-40 rounded-xl bg-zinc-300 p-2 text-lg transition-all duration-200 dark:bg-zinc-800"
                     id="themeSwitchDropdown"
                 >
+                    <h3 class="mb-2 px-3 text-xl font-bold">Theme</h3>
                     <ul class="flex flex-col space-y-2">
                         <li>
                             <label
@@ -62,7 +70,7 @@
                                         src="./icons/sun-moon.svg"
                                         width="20"
                                         height="20"
-                                        class="select-none"
+                                        class="select-none dark:invert"
                                     />
                                     <span>Auto</span>
                                 </div>
@@ -70,7 +78,7 @@
                                     type="radio"
                                     name="themeSwitch"
                                     id="themeSwitch-auto"
-                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
+                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-orange-600 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-orange-600"
                                 />
                             </label>
                         </li>
@@ -86,7 +94,7 @@
                                         src="./icons/sun.svg"
                                         width="20"
                                         height="20"
-                                        class="select-none"
+                                        class="select-none dark:invert"
                                     />
                                     <span class="select-none">Light</span>
                                 </div>
@@ -94,7 +102,7 @@
                                     type="radio"
                                     name="themeSwitch"
                                     id="themeSwitch-light"
-                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
+                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-orange-600 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-orange-600"
                                 />
                             </label>
                         </li>
@@ -110,7 +118,7 @@
                                         src="./icons/moon.svg"
                                         width="20"
                                         height="20"
-                                        class="select-none"
+                                        class="select-none dark:invert"
                                     />
                                     <span class="select-none">Dark</span>
                                 </div>
@@ -118,7 +126,7 @@
                                     type="radio"
                                     name="themeSwitch"
                                     id="themeSwitch-dark"
-                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-indigo-700 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-indigo-700"
+                                    class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-orange-600 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-orange-600"
                                 />
                             </label>
                         </li>
@@ -137,165 +145,218 @@
                 </div>
                 <ul class="flex flex-row items-center justify-center space-x-4">
                     <li
-                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-400/30 dark:bg-neutral-800"
                     >
-                        <div
-                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-orange-400 p-3"
+                        <a
+                            href="/catalog"
+                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
+                            title="Explore fast food options"
                         >
-                            <img
-                                src="./icons/hamburger.svg"
-                                width="96"
-                                height="96"
-                                class="invert select-none"
-                            />
-                        </div>
-                        <div class="flex w-full flex-col px-4 py-3">
-                            <div class="flex w-full flex-row justify-between">
-                                <span class="text-xl">Fast Food</span>
+                            <div
+                                class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-orange-400 p-3"
+                            >
                                 <img
-                                    src="./icons/chevron-right.svg"
-                                    width="16"
-                                    height="16"
-                                    class="select-none"
+                                    src="./icons/hamburger.svg"
+                                    width="96"
+                                    height="96"
+                                    class="invert select-none"
                                 />
                             </div>
-                            <p>
-                                Burgers, fries, and more, delivered fast and
-                                hot.
-                            </p>
-                        </div>
+                            <div class="flex w-full flex-col px-4 py-3">
+                                <div
+                                    class="flex w-full flex-row justify-between"
+                                >
+                                    <span class="text-xl">Fast Food</span>
+                                    <img
+                                        src="./icons/chevron-right.svg"
+                                        width="16"
+                                        height="16"
+                                        class="select-none dark:invert"
+                                    />
+                                </div>
+                                <p>
+                                    Burgers, fries, and more, delivered fast and
+                                    hot.
+                                </p>
+                            </div>
+                        </a>
                     </li>
                     <li
-                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-red-500/30 dark:bg-neutral-800"
                     >
-                        <div
-                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-red-500 p-3"
+                        <a
+                            href="/catalog"
+                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
+                            title="Explore pizza places"
                         >
-                            <img
-                                src="./icons/pizza.svg"
-                                width="96"
-                                height="96"
-                                class="invert select-none"
-                            />
-                        </div>
-                        <div class="flex w-full flex-col px-4 py-3">
-                            <div class="flex w-full flex-row justify-between">
-                                <span class="text-xl">Pizza</span>
+                            <div
+                                class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-red-500 p-3"
+                            >
                                 <img
-                                    src="./icons/chevron-right.svg"
-                                    width="16"
-                                    height="16"
-                                    class="select-none"
+                                    src="./icons/pizza.svg"
+                                    width="96"
+                                    height="96"
+                                    class="invert select-none"
                                 />
                             </div>
-                            <p>Delicious pizzas with for the whole company.</p>
-                        </div>
+                            <div class="flex w-full flex-col px-4 py-3">
+                                <div
+                                    class="flex w-full flex-row justify-between"
+                                >
+                                    <span class="text-xl">Pizza</span>
+                                    <img
+                                        src="./icons/chevron-right.svg"
+                                        width="16"
+                                        height="16"
+                                        class="select-none dark:invert"
+                                    />
+                                </div>
+                                <p>
+                                    Delicious pizzas with for the whole company.
+                                </p>
+                            </div>
+                        </a>
                     </li>
                     <li
-                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-yellow-400/30 dark:bg-neutral-800"
                     >
-                        <div
-                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-yellow-400 p-3"
+                        <a
+                            href="/catalog"
+                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
+                            title="Explore breakfast options"
                         >
-                            <img
-                                src="./icons/egg-fried.svg"
-                                width="96"
-                                height="96"
-                                class="invert select-none"
-                            />
-                        </div>
-                        <div class="flex w-full flex-col px-4 py-3">
-                            <div class="flex w-full flex-row justify-between">
-                                <span class="text-xl">Breakfast</span>
+                            <div
+                                class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-yellow-400 p-3"
+                            >
                                 <img
-                                    src="./icons/chevron-right.svg"
-                                    width="16"
-                                    height="16"
-                                    class="select-none"
+                                    src="./icons/egg-fried.svg"
+                                    width="96"
+                                    height="96"
+                                    class="invert select-none"
                                 />
                             </div>
-                            <p>Start your day with a delicious breakfast.</p>
-                        </div>
+                            <div class="flex w-full flex-col px-4 py-3">
+                                <div
+                                    class="flex w-full flex-row justify-between"
+                                >
+                                    <span class="text-xl">Breakfast</span>
+                                    <img
+                                        src="./icons/chevron-right.svg"
+                                        width="16"
+                                        height="16"
+                                        class="select-none dark:invert"
+                                    />
+                                </div>
+                                <p>
+                                    Start your day with a delicious breakfast.
+                                </p>
+                            </div>
+                        </a>
                     </li>
                     <li
-                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-lime-400/30 dark:bg-neutral-800"
                     >
-                        <div
-                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-lime-400 p-3"
+                        <a
+                            href="/catalog"
+                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
+                            title="Explore vegan options"
                         >
-                            <img
-                                src="./icons/leaf.svg"
-                                width="96"
-                                height="96"
-                                class="invert select-none"
-                            />
-                        </div>
-                        <div class="flex w-full flex-col px-4 py-3">
-                            <div class="flex w-full flex-row justify-between">
-                                <span class="text-xl">Vegan</span>
+                            <div
+                                class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-lime-400 p-3"
+                            >
                                 <img
-                                    src="./icons/chevron-right.svg"
-                                    width="16"
-                                    height="16"
-                                    class="select-none"
+                                    src="./icons/leaf.svg"
+                                    width="96"
+                                    height="96"
+                                    class="invert select-none"
                                 />
                             </div>
-                            <p>Healthy and delicious vegan options.</p>
-                        </div>
+                            <div class="flex w-full flex-col px-4 py-3">
+                                <div
+                                    class="flex w-full flex-row justify-between"
+                                >
+                                    <span class="text-xl">Vegan</span>
+                                    <img
+                                        src="./icons/chevron-right.svg"
+                                        width="16"
+                                        height="16"
+                                        class="select-none dark:invert"
+                                    />
+                                </div>
+                                <p>Healthy and delicious vegan options.</p>
+                            </div>
+                        </a>
                     </li>
                     <li
-                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-800/30 dark:bg-neutral-800"
                     >
-                        <div
-                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-orange-800 p-3"
+                        <a
+                            href="/catalog"
+                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
+                            title="Explore bakery options"
                         >
-                            <img
-                                src="./icons/croissant.svg"
-                                width="96"
-                                height="96"
-                                class="invert select-none"
-                            />
-                        </div>
-                        <div class="flex w-full flex-col px-4 py-3">
-                            <div class="flex w-full flex-row justify-between">
-                                <span class="text-xl">Bakery</span>
+                            <div
+                                class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-orange-800 p-3"
+                            >
                                 <img
-                                    src="./icons/chevron-right.svg"
-                                    width="16"
-                                    height="16"
-                                    class="select-none"
+                                    src="./icons/croissant.svg"
+                                    width="96"
+                                    height="96"
+                                    class="invert select-none"
                                 />
                             </div>
-                            <p>Freshly baked goods delivered to you.</p>
-                        </div>
+                            <div class="flex w-full flex-col px-4 py-3">
+                                <div
+                                    class="flex w-full flex-row justify-between"
+                                >
+                                    <span class="text-xl">Bakery</span>
+                                    <img
+                                        src="./icons/chevron-right.svg"
+                                        width="16"
+                                        height="16"
+                                        class="select-none dark:invert"
+                                    />
+                                </div>
+                                <p>Freshly baked goods delivered to you.</p>
+                            </div>
+                        </a>
                     </li>
                     <li
-                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-300 shadow-xl"
+                        class="flex w-[calc(100vw/7)] flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-400/30 dark:bg-neutral-800"
                     >
-                        <div
-                            class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-pink-400 p-3"
+                        <a
+                            href="/catalog"
+                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
+                            title="Explore dessert options"
                         >
-                            <img
-                                src="./icons/cake-slice.svg"
-                                width="96"
-                                height="96"
-                                class="invert select-none"
-                            />
-                        </div>
-                        <div class="flex w-full flex-col px-4 py-3">
-                            <div class="flex w-full flex-row justify-between">
-                                <span class="text-xl">Desserts</span>
+                            <div
+                                class="flex h-[calc(100vw/7)] w-full flex-col items-center justify-center rounded-t-2xl bg-pink-400 p-3"
+                            >
                                 <img
-                                    src="./icons/chevron-right.svg"
-                                    width="16"
-                                    height="16"
-                                    class="select-none"
+                                    src="./icons/cake-slice.svg"
+                                    width="96"
+                                    height="96"
+                                    class="invert select-none"
                                 />
                             </div>
-                            <p>Sweet treats to satisfy your cravings.</p>
-                        </div>
+                            <div class="flex w-full flex-col px-4 py-3">
+                                <div
+                                    class="flex w-full flex-row justify-between"
+                                >
+                                    <span class="text-xl">Desserts</span>
+                                    <img
+                                        src="./icons/chevron-right.svg"
+                                        width="16"
+                                        height="16"
+                                        class="select-none dark:invert"
+                                    />
+                                </div>
+                                <p>Sweet treats to satisfy your cravings.</p>
+                            </div>
+                        </a>
                     </li>
                 </ul>
+                <div class="flex h-[100vh] w-full"></div>
             </main>
         </div>
         <script src="./themeSwitcher.js" type="module"></script>

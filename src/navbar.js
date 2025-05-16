@@ -6,9 +6,9 @@ window.addEventListener("DOMContentLoaded", function () {
     const themeSwitchButton = document.getElementById("themeSwitchButton");
 
     const navbarDefaultClassName =
-        "sticky top-2 left-6 z-50 mb-2 flex w-[calc(100vw-3rem)] flex-row justify-between rounded-4xl bg-gray-200 px-2 py-2 transition-all duration-300";
+        "sticky top-2 left-6 z-50 mb-2 flex w-[calc(100vw-3rem)] flex-row justify-between rounded-4xl shadow-sm bg-zinc-300 dark:bg-zinc-800 px-2 py-2 transition-all duration-300";
     const navbarScrolledClassName =
-        "sticky top-0 left-0 z-50 mb-2 flex w-full flex-row justify-between rounded-none bg-gray-200 px-2 py-2 transition-all duration-300";
+        "sticky top-0 left-0 z-50 mb-2 flex w-full flex-row justify-between rounded-none bg-zinc-300 shadow-sm dark:bg-zinc-800 px-2 py-2 transition-all duration-300";
 
     navbar.className = navbarDefaultClassName;
 
