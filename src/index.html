@@ -27,7 +27,7 @@
                     </h1>
                 </div>
                 <ul
-                    class="grid grid-cols-2 gap-4 md:flex md:flex-row md:items-center md:justify-center md:space-x-4"
+                    class="grid grid-cols-2 gap-3 px-2 md:flex md:flex-row md:items-center md:justify-center md:space-x-4"
                 >
                     <li
                         class="flex flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-400/30 md:w-[calc(100vw/7)] dark:bg-neutral-800"
@@ -260,17 +260,19 @@
                     </li>
                 </ul>
                 <section class="my-10 flex w-full flex-col space-y-6 px-4">
-                    <h2 class="text-5xl font-bold">Special offers</h2>
+                    <h2 class="text-2xl font-bold md:text-5xl">
+                        Special offers
+                    </h2>
                     <div
-                        class="flex flex-row items-center justify-center space-x-6"
+                        class="flex flex-col items-center justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-6"
                     >
                         <div
-                            class="relative flex h-[calc(1/3*100vw)] w-1/3 flex-col rounded-2xl bg-neutral-100 shadow-md transition-colors duration-200 dark:bg-neutral-800"
+                            class="relative flex flex-col rounded-2xl bg-neutral-100 shadow-md transition-colors duration-200 md:h-[calc(1/3*100vw)] md:w-1/3 dark:bg-neutral-800"
                         >
                             <img
                                 src="./local/welcome.jpg"
                                 alt=""
-                                class="relative h-80 w-full rounded-t-2xl object-cover"
+                                class="relative h-50 w-full rounded-t-2xl object-cover md:h-80"
                             />
                             <div
                                 class="flex h-full w-full flex-col justify-between space-y-4 px-4 pt-3 pb-4"
@@ -283,15 +285,15 @@
                                             class="flex flex-row items-center justify-center rounded-full bg-orange-600 px-3 text-white shadow-sm"
                                         >
                                             <span
-                                                class="text-lg font-bold md:text-xl"
+                                                class="font-bold md:text-lg md:text-xl"
                                                 >50%</span
                                             >
                                         </div>
-                                        <h3 class="text-2xl">
+                                        <h3 class="text-base md:text-2xl">
                                             Discount on your first order
                                         </h3>
                                     </div>
-                                    <p>
+                                    <p class="text-sm md:text-base">
                                         Welcome new users! Get 50% off on your
                                         first order with us. Follow the link
                                         below to learn more about the offer.
@@ -299,19 +301,19 @@
                                 </div>
                                 <a
                                     href="/catalog"
-                                    class="text-xl text-orange-600 underline"
+                                    class="text-base text-orange-600 underline md:text-xl"
                                 >
                                     Learn more
                                 </a>
                             </div>
                         </div>
                         <div
-                            class="flex h-[calc(1/3*100vw)] w-1/3 flex-col rounded-2xl bg-neutral-100 shadow-md transition-colors duration-200 dark:bg-neutral-800"
+                            class="relative flex flex-col rounded-2xl bg-neutral-100 shadow-md transition-colors duration-200 md:h-[calc(1/3*100vw)] md:w-1/3 dark:bg-neutral-800"
                         >
                             <img
                                 src="./local/burgersandfries.jpg"
                                 alt=""
-                                class="relative h-80 w-full rounded-t-2xl object-cover"
+                                class="relative h-50 w-full rounded-t-2xl object-cover md:h-80"
                             />
                             <div
                                 class="flex h-full w-full flex-col justify-between space-y-4 px-4 pt-3 pb-4"
@@ -324,15 +326,15 @@
                                             class="flex flex-row items-center justify-center rounded-full bg-orange-600 px-3 text-white shadow-sm"
                                         >
                                             <span
-                                                class="text-lg font-bold md:text-xl"
+                                                class="font-bold md:text-lg md:text-xl"
                                                 >25%</span
                                             >
                                         </div>
-                                        <h3 class="text-2xl">
+                                        <h3 class="text-base md:text-2xl">
                                             In all fast food restaurants
                                         </h3>
                                     </div>
-                                    <p>
+                                    <p class="text-sm md:text-base">
                                         Get 25% off on burgers and fries in all
                                         fast food chains. Follow the link below
                                         to learn more about the offer.
@@ -340,7 +342,7 @@
                                 </div>
                                 <a
                                     href="/catalog"
-                                    class="text-xl text-orange-600 underline"
+                                    class="text-base text-orange-600 underline md:text-xl"
                                 >
                                     Learn more
                                 </a>

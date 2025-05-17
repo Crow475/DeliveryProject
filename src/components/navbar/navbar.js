@@ -21,6 +21,12 @@ class Navbar extends HTMLElement {
         const themeSwitchButton =
             shadowRoot.getElementById("themeSwitchButton");
 
+        const mobileMenuButton = shadowRoot.getElementById("mobileMenuButton");
+        const mobileMenu = shadowRoot.getElementById("mobileMenu");
+        const mobileMenuCloseButton = shadowRoot.getElementById(
+            "mobileMenuCloseButton",
+        );
+
         const navbarDefaultClassName =
             "sticky top-2 left-6 z-50 mb-2 flex w-[calc(100vw-3rem)] flex-row justify-between rounded-4xl shadow-sm bg-zinc-300 dark:bg-zinc-800 px-2 py-2 transition-all duration-300 font-geist";
         const navbarScrolledClassName =
@@ -46,6 +52,18 @@ class Navbar extends HTMLElement {
             }
         });
 
+        mobileMenuButton.addEventListener("click", function (event) {
+            if (mobileMenu.classList.contains("hidden")) {
+                mobileMenu.classList.remove("hidden");
+            } else {
+                mobileMenu.classList.add("hidden");
+            }
+        });
+
+        mobileMenuCloseButton.addEventListener("click", function (event) {
+            mobileMenu.classList.add("hidden");
+        });
+
         themeSwitchButton.addEventListener("click", function (event) {
             if (themeSwitchDropdown.classList.contains("hidden")) {
                 themeSwitchDropdown.classList.remove("hidden");
@@ -63,6 +81,19 @@ class Navbar extends HTMLElement {
         //     }
         // });
 
+        const themeSwitchDark = shadowRoot.getElementById("themeSwitch-dark");
+        const themeSwitchLight = shadowRoot.getElementById("themeSwitch-light");
+        const themeSwitchAuto = shadowRoot.getElementById("themeSwitch-auto");
+        const themeSwitchMobileDark = shadowRoot.getElementById(
+            "themeSwitchMobile-dark",
+        );
+        const themeSwitchMobileLight = shadowRoot.getElementById(
+            "themeSwitchMobile-light",
+        );
+        const themeSwitchMobileAuto = shadowRoot.getElementById(
+            "themeSwitchMobile-auto",
+        );
+
         if (!("theme" in localStorage)) {
             console.log("No theme in localStorage");
             if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -71,20 +102,19 @@ class Navbar extends HTMLElement {
                 lighten();
             }
 
-            shadowRoot.getElementById("themeSwitch-auto").checked = true;
+            themeSwitchAuto.checked = true;
+            themeSwitchMobileAuto.checked = true;
         }
 
         if (localStorage.getItem("theme") === "dark") {
             darken();
-            shadowRoot.getElementById("themeSwitch-dark").checked = true;
+            themeSwitchDark.checked = true;
+            themeSwitchMobileDark.checked = true;
         } else if (localStorage.getItem("theme") === "light") {
             lighten();
-            shadowRoot.getElementById("themeSwitch-light").checked = true;
+            themeSwitchLight.checked = true;
+            themeSwitchMobileLight.checked = true;
         }
-
-        const themeSwitchDark = shadowRoot.getElementById("themeSwitch-dark");
-        const themeSwitchLight = shadowRoot.getElementById("themeSwitch-light");
-        const themeSwitchAuto = shadowRoot.getElementById("themeSwitch-auto");
 
         themeSwitchDark.addEventListener("click", function (event) {
             setTheme("dark");
@@ -98,14 +128,26 @@ class Navbar extends HTMLElement {
             resetTheme();
         });
 
+        themeSwitchMobileDark.addEventListener("click", function (event) {
+            setTheme("dark");
+        });
+        themeSwitchMobileLight.addEventListener("click", function (event) {
+            setTheme("light");
+        });
+        themeSwitchMobileAuto.addEventListener("click", function (event) {
+            resetTheme();
+        });
+
         function setTheme(theme) {
             if (theme === "dark") {
                 localStorage.setItem("theme", "dark");
-                shadowRoot.getElementById("themeSwitch-dark").checked = true;
+                themeSwitchDark.checked = true;
+                themeSwitchMobileDark.checked = true;
                 darken();
             } else if (theme === "light") {
                 localStorage.setItem("theme", "light");
-                shadowRoot.getElementById("themeSwitch-light").checked = true;
+                themeSwitchLight.checked = true;
+                themeSwitchMobileLight.checked = true;
                 lighten();
             }
         }
@@ -115,9 +157,11 @@ class Navbar extends HTMLElement {
 
             root.classList.remove("dark");
             navbar.classList.remove("dark");
+            mobileMenu.classList.remove("dark");
             localStorage.removeItem("theme");
 
-            shadowRoot.getElementById("themeSwitch-auto").checked = true;
+            themeSwitchAuto.checked = true;
+            themeSwitchMobileAuto.checked = true;
 
             if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
                 darken();
@@ -133,6 +177,7 @@ class Navbar extends HTMLElement {
 
             root.classList.add("dark");
             navbar.classList.add("dark");
+            mobileMenu.classList.add("dark");
             themeSwitchIcon.src = "./icons/moon.svg";
         }
 
@@ -143,6 +188,7 @@ class Navbar extends HTMLElement {
 
             root.classList.remove("dark");
             navbar.classList.remove("dark");
+            mobileMenu.classList.remove("dark");
             themeSwitchIcon.src = "./icons/sun.svg";
         }
     }

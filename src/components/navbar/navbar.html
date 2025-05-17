@@ -1,6 +1,102 @@
 <link href="../../styles.css" rel="stylesheet" />
+<div
+    id="mobileMenu"
+    class="fixed top-16 left-[10vw] z-[60] hidden w-[80vw] flex-col items-center justify-center space-y-4 rounded-2xl bg-zinc-300 p-4 text-black shadow-md transition-colors duration-200 dark:bg-zinc-800 dark:text-white"
+>
+    <button id="mobileMenuCloseButton">
+        <img
+            src="./icons/x.svg"
+            width="20"
+            height="20"
+            class="select-none dark:invert"
+        />
+    </button>
+    <ul class="flex flex-col space-y-2 text-xl">
+        <li>
+            <a href="/"> Home </a>
+        </li>
+        <li>
+            <a href="/catalog">Catalog</a>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+    </ul>
+    <div class="flex flex-col items-start">
+        <h3 class="mb-2 text-lg">Theme</h3>
+        <ul
+            class="flex flex-row items-center justify-center divide-x divide-neutral-500/50 rounded-lg border-2 border-neutral-500/50"
+        >
+            <li>
+                <label
+                    class="flex flex-row items-center rounded-s-md px-2 has-checked:bg-orange-600 has-checked:text-white"
+                    for="themeSwitchMobile-auto"
+                >
+                    <input
+                        name="themeSwitchMobile"
+                        type="radio"
+                        id="themeSwitchMobile-auto"
+                        class="peer appearance-none"
+                    />
+                    <img
+                        src="./icons/sun-moon.svg"
+                        width="18"
+                        height="18"
+                        class="me-2 select-none peer-checked:invert dark:invert"
+                    />
+                    <span>Auto</span>
+                </label>
+            </li>
+            <li>
+                <label
+                    class="flex flex-row items-center px-2 has-checked:bg-orange-600 has-checked:text-white"
+                    for="themeSwitchMobile-light"
+                >
+                    <input
+                        name="themeSwitchMobile"
+                        type="radio"
+                        id="themeSwitchMobile-light"
+                        class="peer appearance-none"
+                    />
+                    <img
+                        src="./icons/sun.svg"
+                        width="18"
+                        height="18"
+                        class="me-2 select-none peer-checked:invert dark:invert"
+                    />
+                    <span class="select-none">Light</span>
+                </label>
+            </li>
+            <li>
+                <label
+                    class="flex flex-row items-center rounded-e-md px-2 has-checked:bg-orange-600 has-checked:text-white"
+                    for="themeSwitchMobile-dark"
+                >
+                    <input
+                        name="themeSwitchMobile"
+                        type="radio"
+                        id="themeSwitchMobile-dark"
+                        class="peer appearance-none"
+                    />
+                    <img
+                        src="./icons/moon.svg"
+                        width="18"
+                        height="18"
+                        class="me-2 select-none peer-checked:invert dark:invert"
+                    />
+                    <span class="select-none">Dark</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+        <img src="./logo_vertical_mono.svg" class="mt-6 w-20 dark:invert" />
+    </div>
+</div>
 <nav id="navbar">
-    <ul class="mx-3 flex flex-row items-center justify-start space-x-3 text-xl">
+    <ul
+        class="mx-3 hidden flex-row items-center justify-start space-x-3 text-xl md:flex"
+    >
         <li>
             <a href="/">
                 <img src="./logo_full.svg" class="block w-32 dark:hidden" />
@@ -17,6 +113,17 @@
             <a href="/about">About</a>
         </li>
     </ul>
+    <button
+        class="cursor-pointer rounded-4xl bg-gray-500 p-2 md:hidden"
+        id="mobileMenuButton"
+    >
+        <img
+            src="./icons/menu.svg"
+            width="16"
+            height="16"
+            class="invert select-none"
+        />
+    </button>
     <div class="flex flex-row space-x-2">
         <button
             class="flex h-8 flex-row items-center space-x-2 rounded-4xl bg-orange-600 px-3 py-2 text-white"
@@ -30,7 +137,7 @@
             <span class="text-sm font-bold">Cart</span>
         </button>
         <button
-            class="cursor-pointer rounded-4xl bg-gray-500 p-2"
+            class="hidden cursor-pointer rounded-4xl bg-gray-500 p-2 md:block"
             id="themeSwitchButton"
         >
             <img
@@ -42,7 +149,7 @@
             />
         </button>
         <div
-            class="absolute top-14 right-4 hidden min-w-40 rounded-xl bg-zinc-300 p-2 text-lg transition-all duration-200 dark:bg-zinc-800"
+            class="invisible absolute top-14 right-4 hidden min-w-40 rounded-xl bg-zinc-300 p-2 text-lg transition-all duration-200 md:visible dark:bg-zinc-800"
             id="themeSwitchDropdown"
         >
             <h3 class="mb-2 px-3 text-xl">Theme</h3>
