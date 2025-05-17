@@ -1,0 +1,125 @@
+<link href="../../styles.css" rel="stylesheet" />
+<nav id="navbar">
+    <ul class="mx-3 flex flex-row items-center justify-start space-x-3 text-xl">
+        <li>
+            <a href="/">
+                <img src="./logo_full.svg" class="block w-32 dark:hidden" />
+                <img
+                    src="./logo_full_white.svg"
+                    class="hidden w-32 dark:block"
+                />
+            </a>
+        </li>
+        <li>
+            <a class="">Catalog</a>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+    </ul>
+    <div class="flex flex-row space-x-2">
+        <button
+            class="flex h-8 flex-row items-center space-x-2 rounded-4xl bg-orange-600 px-3 py-2 text-white"
+        >
+            <img
+                src="./icons/shopping-cart.svg"
+                width="16"
+                height="16"
+                class="invert select-none"
+            />
+            <span class="text-sm font-bold">Cart</span>
+        </button>
+        <button
+            class="cursor-pointer rounded-4xl bg-gray-500 p-2"
+            id="themeSwitchButton"
+        >
+            <img
+                src="./icons/sun.svg"
+                width="16"
+                height="16"
+                class="invert select-none"
+                id="themeSwitchIcon"
+            />
+        </button>
+        <div
+            class="absolute top-14 right-4 hidden min-w-40 rounded-xl bg-zinc-300 p-2 text-lg transition-all duration-200 dark:bg-zinc-800"
+            id="themeSwitchDropdown"
+        >
+            <h3 class="mb-2 px-3 text-xl">Theme</h3>
+            <ul class="flex flex-col space-y-2">
+                <li>
+                    <label
+                        class="flex cursor-pointer flex-row items-center justify-between space-x-2 rounded-3xl px-2"
+                        for="themeSwitch-auto"
+                    >
+                        <div
+                            class="flex flex-row items-center justify-start space-x-2"
+                        >
+                            <img
+                                src="./icons/sun-moon.svg"
+                                width="20"
+                                height="20"
+                                class="select-none dark:invert"
+                            />
+                            <span>Auto</span>
+                        </div>
+                        <input
+                            type="radio"
+                            name="themeSwitch"
+                            id="themeSwitch-auto"
+                            class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-orange-600 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-orange-600"
+                        />
+                    </label>
+                </li>
+                <li>
+                    <label
+                        class="flex cursor-pointer flex-row items-center justify-between space-x-2 rounded-3xl px-2"
+                        for="themeSwitch-light"
+                    >
+                        <div
+                            class="flex flex-row items-center justify-start space-x-2"
+                        >
+                            <img
+                                src="./icons/sun.svg"
+                                width="20"
+                                height="20"
+                                class="select-none dark:invert"
+                            />
+                            <span class="select-none">Light</span>
+                        </div>
+                        <input
+                            type="radio"
+                            name="themeSwitch"
+                            id="themeSwitch-light"
+                            class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-orange-600 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-orange-600"
+                        />
+                    </label>
+                </li>
+                <li>
+                    <label
+                        class="flex cursor-pointer flex-row items-center justify-between space-x-2 rounded-3xl px-2"
+                        for="themeSwitch-dark"
+                    >
+                        <div
+                            class="flex flex-row items-center justify-start space-x-2"
+                        >
+                            <img
+                                src="./icons/moon.svg"
+                                width="20"
+                                height="20"
+                                class="select-none dark:invert"
+                            />
+                            <span class="select-none">Dark</span>
+                        </div>
+                        <input
+                            type="radio"
+                            name="themeSwitch"
+                            id="themeSwitch-dark"
+                            class="flex h-3 w-3 appearance-none flex-col items-center justify-center rounded-full border-2 border-orange-600 bg-white after:block after:h-1 after:w-1 after:rounded-full after:bg-white after:content-[''] checked:bg-orange-600"
+                        />
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

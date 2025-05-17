@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -6,4 +9,9 @@
         @apply bg-stone-100 text-black dark:bg-black dark:text-white;
         @apply transition-colors duration-300 ease-in-out;
     }
+}
+
+@theme {
+    --font-geist: "Geist", sans-serif;
+    --font-display: "Montserrat", sans-serif;
 }
