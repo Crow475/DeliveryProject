@@ -11,6 +11,7 @@ export default defineConfig({
             input: {
                 main: "src/index.html",
                 navbar: "src/components/navbar/navbar.html",
+                categoryCard: "src/components/category-card/category-card.html",
                 about: "src/about.html",
             },
         },

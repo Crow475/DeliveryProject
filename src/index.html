@@ -8,6 +8,11 @@
         <title>FoodRocket | Food delivered fast</title>
 
         <script
+            src="./components/category-card/category-card.js"
+            type="module"
+            defer
+        ></script>
+        <script
             src="./components/navbar/navbar.js"
             type="module"
             defer
@@ -29,235 +34,54 @@
                 <ul
                     class="grid grid-cols-2 gap-3 px-2 md:flex md:flex-row md:items-center md:justify-center md:space-x-4"
                 >
-                    <li
-                        class="flex flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-400/30 md:w-[calc(100vw/7)] dark:bg-neutral-800"
-                    >
-                        <a
-                            href="/catalog"
-                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
-                            title="Explore fast food options"
-                        >
-                            <div
-                                class="flex w-full flex-col items-center justify-center rounded-t-2xl bg-orange-400 p-3 md:md:h-[calc(100vw/7)]"
-                            >
-                                <img
-                                    src="./icons/hamburger.svg"
-                                    width="96"
-                                    height="96"
-                                    class="invert select-none"
-                                />
-                            </div>
-                            <div class="flex w-full flex-col px-4 py-3">
-                                <div
-                                    class="flex w-full flex-row justify-between"
-                                >
-                                    <span class="text-lg font-bold md:text-xl"
-                                        >Fast Food</span
-                                    >
-                                    <img
-                                        src="./icons/chevron-right.svg"
-                                        width="16"
-                                        height="16"
-                                        class="select-none dark:invert"
-                                    />
-                                </div>
-                                <p class="text-sm md:text-base">
-                                    Burgers, fries, and more, delivered fast and
-                                    hot.
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li
-                        class="flex flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-red-500/30 md:w-[calc(100vw/7)] dark:bg-neutral-800"
-                    >
-                        <a
-                            href="/catalog"
-                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
-                            title="Explore pizza places"
-                        >
-                            <div
-                                class="flex w-full flex-col items-center justify-center rounded-t-2xl bg-red-500 p-3 md:h-[calc(100vw/7)]"
-                            >
-                                <img
-                                    src="./icons/pizza.svg"
-                                    width="96"
-                                    height="96"
-                                    class="invert select-none"
-                                />
-                            </div>
-                            <div class="flex w-full flex-col px-4 py-3">
-                                <div
-                                    class="flex w-full flex-row justify-between"
-                                >
-                                    <span class="text-lg font-bold md:text-xl"
-                                        >Pizza</span
-                                    >
-                                    <img
-                                        src="./icons/chevron-right.svg"
-                                        width="16"
-                                        height="16"
-                                        class="select-none dark:invert"
-                                    />
-                                </div>
-                                <p class="text-sm md:text-base">
-                                    Delicious pizzas with for the whole company.
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li
-                        class="flex flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-yellow-400/30 md:w-[calc(100vw/7)] dark:bg-neutral-800"
-                    >
-                        <a
-                            href="/catalog"
-                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
-                            title="Explore breakfast options"
-                        >
-                            <div
-                                class="flex w-full flex-col items-center justify-center rounded-t-2xl bg-yellow-400 p-3 md:h-[calc(100vw/7)]"
-                            >
-                                <img
-                                    src="./icons/egg-fried.svg"
-                                    width="96"
-                                    height="96"
-                                    class="invert select-none"
-                                />
-                            </div>
-                            <div class="flex w-full flex-col px-4 py-3">
-                                <div
-                                    class="flex w-full flex-row justify-between"
-                                >
-                                    <span class="text-lg font-bold md:text-xl"
-                                        >Breakfast</span
-                                    >
-                                    <img
-                                        src="./icons/chevron-right.svg"
-                                        width="16"
-                                        height="16"
-                                        class="select-none dark:invert"
-                                    />
-                                </div>
-                                <p class="text-sm md:text-base">
-                                    Start your day with a delicious breakfast.
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li
-                        class="flex flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-lime-400/30 md:w-[calc(100vw/7)] dark:bg-neutral-800"
-                    >
-                        <a
-                            href="/catalog"
-                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
-                            title="Explore vegan options"
-                        >
-                            <div
-                                class="flex w-full flex-col items-center justify-center rounded-t-2xl bg-lime-400 p-3 md:h-[calc(100vw/7)]"
-                            >
-                                <img
-                                    src="./icons/leaf.svg"
-                                    width="96"
-                                    height="96"
-                                    class="invert select-none"
-                                />
-                            </div>
-                            <div class="flex w-full flex-col px-4 py-3">
-                                <div
-                                    class="flex w-full flex-row justify-between"
-                                >
-                                    <span class="text-lg font-bold md:text-xl"
-                                        >Vegan</span
-                                    >
-                                    <img
-                                        src="./icons/chevron-right.svg"
-                                        width="16"
-                                        height="16"
-                                        class="select-none dark:invert"
-                                    />
-                                </div>
-                                <p class="text-sm md:text-base">
-                                    Healthy and delicious vegan options.
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li
-                        class="flex flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-800/30 md:w-[calc(100vw/7)] dark:bg-neutral-800"
-                    >
-                        <a
-                            href="/catalog"
-                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
-                            title="Explore bakery options"
-                        >
-                            <div
-                                class="flex w-full flex-col items-center justify-center rounded-t-2xl bg-orange-800 p-3 md:h-[calc(100vw/7)]"
-                            >
-                                <img
-                                    src="./icons/croissant.svg"
-                                    width="96"
-                                    height="96"
-                                    class="invert select-none"
-                                />
-                            </div>
-                            <div class="flex w-full flex-col px-4 py-3">
-                                <div
-                                    class="flex w-full flex-row justify-between"
-                                >
-                                    <span class="text-lg font-bold md:text-xl"
-                                        >Bakery</span
-                                    >
-                                    <img
-                                        src="./icons/chevron-right.svg"
-                                        width="16"
-                                        height="16"
-                                        class="select-none dark:invert"
-                                    />
-                                </div>
-                                <p class="text-sm md:text-base">
-                                    Freshly baked goods delivered to you.
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li
-                        class="flex flex-col items-center justify-start rounded-2xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl hover:shadow-pink-400/30 md:w-[calc(100vw/7)] dark:bg-neutral-800"
-                    >
-                        <a
-                            href="/catalog"
-                            class="flex h-full w-full flex-col items-center justify-start rounded-2xl"
-                            title="Explore dessert options"
-                        >
-                            <div
-                                class="flex w-full flex-col items-center justify-center rounded-t-2xl bg-pink-400 p-3 md:h-[calc(100vw/7)]"
-                            >
-                                <img
-                                    src="./icons/cake-slice.svg"
-                                    width="96"
-                                    height="96"
-                                    class="invert select-none"
-                                />
-                            </div>
-                            <div class="flex w-full flex-col px-4 py-3">
-                                <div
-                                    class="flex w-full flex-row justify-between"
-                                >
-                                    <span class="text-lg font-bold md:text-xl"
-                                        >Desserts</span
-                                    >
-                                    <img
-                                        src="./icons/chevron-right.svg"
-                                        width="16"
-                                        height="16"
-                                        class="select-none dark:invert"
-                                    />
-                                </div>
-                                <p class="text-sm md:text-base">
-                                    Sweet treats to satisfy your cravings.
-                                </p>
-                            </div>
-                        </a>
-                    </li>
+                    <category-card-element
+                        title="Fast Food"
+                        description="Burgers, fries, and more, delivered fast and hot."
+                        icon="./icons/hamburger.svg"
+                        color="bg-orange-400"
+                        shadow="hover:shadow-orange-400/30"
+                        link="/catalog"
+                    ></category-card-element>
+                    <category-card-element
+                        title="Pizza"
+                        description="Delicious pizzas with for the whole company."
+                        icon="./icons/pizza.svg"
+                        color="bg-red-500"
+                        shadow="hover:shadow-red-500/30"
+                        link="/catalog"
+                    ></category-card-element>
+                    <category-card-element
+                        title="Breakfast"
+                        description="Start your day with a delicious breakfast."
+                        icon="./icons/egg-fried.svg"
+                        color="bg-yellow-400"
+                        shadow="hover:shadow-yellow-400/30"
+                        link="/catalog"
+                    ></category-card-element>
+                    <category-card-element
+                        title="Vegan"
+                        description="Healthy and delicious vegan options."
+                        icon="./icons/leaf.svg"
+                        color="bg-lime-400"
+                        shadow="hover:shadow-lime-400/30"
+                        link="/catalog"
+                    ></category-card-element>
+                    <category-card-element
+                        title="Bakery"
+                        description="Freshly baked goods delivered to you."
+                        icon="./icons/croissant.svg"
+                        color="bg-orange-800"
+                        shadow="hover:shadow-orange-800/30"
+                        link="/catalog"
+                    ></category-card-element>
+                    <category-card-element
+                        title="Desserts"
+                        description="Sweet treats to satisfy your cravings."
+                        icon="./icons/cake-slice.svg"
+                        color="bg-pink-400"
+                        shadow="hover:shadow-pink-400/30"
+                        link="/catalog"
+                    ></category-card-element>
                 </ul>
                 <section class="my-10 flex w-full flex-col space-y-6 px-4">
                     <h2 class="text-2xl font-bold md:text-5xl">

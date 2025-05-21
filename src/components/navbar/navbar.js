@@ -171,25 +171,49 @@ class Navbar extends HTMLElement {
         }
 
         function darken() {
-            const root = document.documentElement;
-            const themeSwitchIcon =
-                shadowRoot.getElementById("themeSwitchIcon");
+            customElements.whenDefined("category-card-element").then(() => {
+                const root = document.documentElement;
+                const ccards = document.querySelectorAll(
+                    "category-card-element",
+                );
+                const themeSwitchIcon =
+                    shadowRoot.getElementById("themeSwitchIcon");
 
-            root.classList.add("dark");
-            navbar.classList.add("dark");
-            mobileMenu.classList.add("dark");
-            themeSwitchIcon.src = "./icons/moon.svg";
+                root.classList.add("dark");
+                navbar.classList.add("dark");
+                mobileMenu.classList.add("dark");
+
+                ccards.forEach((ccard) => {
+                    ccard.shadowRoot
+                        .getElementById("ccard")
+                        .classList.add("dark");
+                });
+
+                themeSwitchIcon.src = "./icons/moon.svg";
+            });
         }
 
         function lighten() {
-            const root = document.documentElement;
-            const themeSwitchIcon =
-                shadowRoot.getElementById("themeSwitchIcon");
+            customElements.whenDefined("category-card-element").then(() => {
+                const root = document.documentElement;
+                const ccards = document.querySelectorAll(
+                    "category-card-element",
+                );
+                const themeSwitchIcon =
+                    shadowRoot.getElementById("themeSwitchIcon");
 
-            root.classList.remove("dark");
-            navbar.classList.remove("dark");
-            mobileMenu.classList.remove("dark");
-            themeSwitchIcon.src = "./icons/sun.svg";
+                root.classList.remove("dark");
+                navbar.classList.remove("dark");
+                mobileMenu.classList.remove("dark");
+
+                ccards.forEach((ccard) => {
+                    ccard.shadowRoot
+                        .getElementById("ccard")
+                        .classList.remove("dark");
+                });
+
+                themeSwitchIcon.src = "./icons/sun.svg";
+            });
         }
     }
 }
