@@ -1,6 +1,6 @@
 const navbarTemplate = document.createElement("template");
 
-const resp = await fetch("./components/footer/footer.html");
+const resp = await fetch("/components/footer/footer.html");
 const htmlrequested = await resp.text();
 
 navbarTemplate.innerHTML = htmlrequested;

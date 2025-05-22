@@ -1,6 +1,6 @@
 const navbarTemplate = document.createElement("template");
 
-const resp = await fetch("./components/navbar/navbar.html");
+const resp = await fetch("/components/navbar/navbar.html");
 const htmlrequested = await resp.text();
 
 navbarTemplate.innerHTML = htmlrequested;
@@ -95,7 +95,6 @@ class Navbar extends HTMLElement {
         );
 
         if (!("theme" in localStorage)) {
-            console.log("No theme in localStorage");
             if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
                 darken();
             } else {
@@ -171,69 +170,89 @@ class Navbar extends HTMLElement {
         }
 
         function darken() {
-            customElements.whenDefined("footer-element").then(() => {
-                const root = document.documentElement;
-                const ccards = document.querySelectorAll(
-                    "category-card-element",
-                );
-                const rcards = document.querySelectorAll(
-                    "restaurant-card-element",
-                );
-                const themeSwitchIcon =
-                    shadowRoot.getElementById("themeSwitchIcon");
+            const root = document.documentElement;
+            const ccards = document.querySelectorAll("category-card-element");
+            const rcards = document.querySelectorAll("restaurant-card-element");
+            const themeSwitchIcon =
+                shadowRoot.getElementById("themeSwitchIcon");
 
-                root.classList.add("dark");
-                navbar.classList.add("dark");
-                mobileMenu.classList.add("dark");
+            root.classList.add("dark");
+            navbar.classList.add("dark");
+            mobileMenu.classList.add("dark");
 
-                ccards.forEach((ccard) => {
-                    ccard.shadowRoot
-                        .getElementById("ccard")
-                        .classList.add("dark");
+            customElements.whenDefined("category-card-element").then(() => {
+                waitForElement("category-card-element").then(() => {
+                    ccards.forEach((ccard) => {
+                        ccard.shadowRoot
+                            .getElementById("ccard")
+                            .classList.add("dark");
+                    });
                 });
-
-                rcards.forEach((rcard) => {
-                    rcard.shadowRoot
-                        .getElementById("rcard")
-                        .classList.add("dark");
-                });
-
-                themeSwitchIcon.src = "./icons/moon.svg";
             });
+
+            customElements.whenDefined("restaurant-card-element").then(() => {
+                waitForElement("restaurant-card-element").then(() => {
+                    rcards.forEach((rcard) => {
+                        rcard.shadowRoot
+                            .getElementById("rcard")
+                            .classList.add("dark");
+                    });
+                });
+            });
+
+            themeSwitchIcon.src = "/icons/moon.svg";
         }
 
         function lighten() {
-            customElements.whenDefined("footer-element").then(() => {
-                const root = document.documentElement;
-                const ccards = document.querySelectorAll(
-                    "category-card-element",
-                );
-                const rcards = document.querySelectorAll(
-                    "restaurant-card-element",
-                );
-                const themeSwitchIcon =
-                    shadowRoot.getElementById("themeSwitchIcon");
+            const root = document.documentElement;
+            const ccards = document.querySelectorAll("category-card-element");
+            const rcards = document.querySelectorAll("restaurant-card-element");
+            const themeSwitchIcon =
+                shadowRoot.getElementById("themeSwitchIcon");
 
-                root.classList.remove("dark");
-                navbar.classList.remove("dark");
-                mobileMenu.classList.remove("dark");
+            root.classList.remove("dark");
+            navbar.classList.remove("dark");
+            mobileMenu.classList.remove("dark");
 
-                ccards.forEach((ccard) => {
-                    ccard.shadowRoot
-                        .getElementById("ccard")
-                        .classList.remove("dark");
+            customElements.whenDefined("category-card-element").then(() => {
+                waitForElement("category-card-element").then(() => {
+                    ccards.forEach((ccard) => {
+                        ccard.shadowRoot
+                            .getElementById("ccard")
+                            .classList.remove("dark");
+                    });
                 });
-
-                rcards.forEach((rcard) => {
-                    rcard.shadowRoot
-                        .getElementById("rcard")
-                        .classList.remove("dark");
-                });
-
-                themeSwitchIcon.src = "./icons/sun.svg";
             });
+
+            customElements.whenDefined("restaurant-card-element").then(() => {
+                waitForElement("restaurant-card-element").then(() => {
+                    rcards.forEach((rcard) => {
+                        rcard.shadowRoot
+                            .getElementById("rcard")
+                            .classList.remove("dark");
+                    });
+                });
+            });
+
+            themeSwitchIcon.src = "/icons/sun.svg";
         }
     }
+}
+
+function waitForElement(querySelector, timeout = 0) {
+    const startTime = new Date().getTime();
+    return new Promise((resolve, reject) => {
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            if (document.querySelector(querySelector)) {
+                clearInterval(timer);
+                resolve();
+            } else if (timeout && now - startTime >= timeout) {
+                clearInterval(timer);
+                reject();
+            }
+        }, 100);
+    });
 }
 
 customElements.define("navbar-element", Navbar);

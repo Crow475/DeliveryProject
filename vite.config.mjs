@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
     root: "src",
     build: {
+        base: "",
         outDir: "../dist",
         emptyOutDir: true,
         target: "es2022",
@@ -16,6 +17,8 @@ export default defineConfig({
                     "src/components/restaurant-card/restaurant-card.html",
                 footer: "src/components/footer/footer.html",
                 about: "src/about.html",
+                promotions_welcome: "src/promotions/welcome/index.html",
+                promotions_burgers25: "src/promotions/burgers25/index.html",
             },
         },
     },

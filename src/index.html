@@ -3,30 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="./styles.css" rel="stylesheet" />
+        <link href="/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/svg+xml" href="/logo_color.svg" />
         <title>FoodRocket | Food delivered fast</title>
 
         <script
-            src="./components/category-card/category-card.js"
+            src="/components/category-card/category-card.js"
             type="module"
             defer
         ></script>
         <script
-            src="./components/restaurant-card/restaurant-card.js"
+            src="/components/restaurant-card/restaurant-card.js"
             type="module"
             defer
         ></script>
-        <script
-            src="./components/navbar/navbar.js"
-            type="module"
-            defer
-        ></script>
-        <script
-            src="./components/footer/footer.js"
-            type="module"
-            defer
-        ></script>
+        <script src="/components/navbar/navbar.js" type="module" defer></script>
+        <script src="/components/footer/footer.js" type="module" defer></script>
     </head>
     <body>
         <navbar-element></navbar-element>
@@ -47,7 +39,7 @@
                     <category-card-element
                         title="Fast Food"
                         description="Burgers, fries, and more, delivered fast and hot."
-                        icon="./icons/hamburger.svg"
+                        icon="/icons/hamburger.svg"
                         color="bg-orange-400"
                         shadow="hover:shadow-orange-400/30"
                         link="#fast-food-category"
@@ -63,7 +55,7 @@
                     <category-card-element
                         title="Breakfast"
                         description="Start your day with a delicious breakfast."
-                        icon="./icons/egg-fried.svg"
+                        icon="/icons/egg-fried.svg"
                         color="bg-yellow-400"
                         shadow="hover:shadow-yellow-400/30"
                         link="#breakfast-category"
@@ -71,7 +63,7 @@
                     <category-card-element
                         title="Vegan"
                         description="Healthy and delicious vegan options."
-                        icon="./icons/leaf.svg"
+                        icon="/icons/leaf.svg"
                         color="bg-lime-400"
                         shadow="hover:shadow-lime-400/30"
                         link="#vegan-category"
@@ -79,7 +71,7 @@
                     <category-card-element
                         title="Bakery"
                         description="Freshly baked goods delivered to you."
-                        icon="./icons/croissant.svg"
+                        icon="/icons/croissant.svg"
                         color="bg-orange-800"
                         shadow="hover:shadow-orange-800/30"
                         link="#bakery-category"
@@ -87,7 +79,7 @@
                     <category-card-element
                         title="Desserts"
                         description="Sweet treats to satisfy your cravings."
-                        icon="./icons/cake-slice.svg"
+                        icon="/icons/cake-slice.svg"
                         color="bg-pink-400"
                         shadow="hover:shadow-pink-400/30"
                         link="#desserts-category"
@@ -134,7 +126,7 @@
                                     </p>
                                 </div>
                                 <a
-                                    href="/catalog"
+                                    href="/promotions/welcome/"
                                     class="text-base text-orange-600 underline md:text-xl"
                                 >
                                     Learn more
@@ -175,7 +167,7 @@
                                     </p>
                                 </div>
                                 <a
-                                    href="/catalog"
+                                    href="/promotions/burgers25/"
                                     class="text-base text-orange-600 underline md:text-xl"
                                 >
                                     Learn more

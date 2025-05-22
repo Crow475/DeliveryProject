@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FoodRocket | New user</title>
+        <link rel="stylesheet" href="/styles.css" />
+        <link rel="icon" type="image/svg+xml" href="/logo_color.svg" />
+
+        <script src="/components/navbar/navbar.js" type="module" defer></script>
+        <script src="/components/footer/footer.js" type="module" defer></script>
+    </head>
+    <body>
+        <navbar-element></navbar-element>
+        <div class="container p-1">
+            <div
+                class="flex w-full flex-row items-center justify-start px-8 py-4"
+            >
+                <img
+                    src="%VITE_IMAGE_PATH%welcome.jpg"
+                    class="h-100 w-2/3 rounded-xl object-cover"
+                />
+            </div>
+            <main>
+                <div
+                    class="relative flex flex-col items-start justify-start space-y-6 px-8 py-4"
+                >
+                    <h1 class="font-display text-4xl font-black">
+                        Welcome discount to all new users.
+                    </h1>
+                    <div
+                        class="mx-4 flex w-5/12 flex-row items-center space-x-2 rounded-2xl bg-neutral-100 p-4 shadow-md transition-all duration-200 dark:bg-neutral-800"
+                    >
+                        <span
+                            class="w-min rounded-3xl bg-orange-600 px-4 py-1 text-xl font-bold text-nowrap text-white select-none"
+                            >50% off</span
+                        >
+                        <span class="text-xl"
+                            >Discount on your first order</span
+                        >
+                        <div
+                            class="transi flex w-min flex-row items-center justify-start rounded-4xl bg-neutral-200 p-1 text-center duration-200 dark:bg-neutral-700"
+                        >
+                            <input
+                                type="text"
+                                value="WELCOME50"
+                                class="w-40 rounded-3xl text-center text-xl font-bold focus:outline-none"
+                                readonly
+                                id="discountCode"
+                            />
+                            <button
+                                class="flex h-8 w-8 flex-row items-center justify-center rounded-3xl bg-neutral-300 dark:bg-neutral-600"
+                                id="copyButton"
+                            >
+                                <img
+                                    src="/icons/copy.svg"
+                                    width="18"
+                                    height="18"
+                                    class="select-none dark:invert"
+                                    id="copyIcon"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-lg">
+                        We are excited to have you on board! As a token of our
+                        appreciation, we are offering you a special discount on
+                        your first order.
+                    </p>
+                    <p class="text-lg">
+                        Use the code <strong>WELCOME50</strong> at checkout to
+                        enjoy 50% off your first order. To redeem your discount,
+                        simply enter the code at checkout. You can get the code
+                        using the button above Don't miss out on this
+                        opportunity to try our delicious food at a great price!
+                    </p>
+                    <p class="text-lg">
+                        This offer is valid for new users only and can be used
+                        on any item in our menu. Restrictions may apply, check
+                        the terms and conditions for details. Not valid with any
+                        other promotions or discounts. One time use only. Only
+                        newly registered users are eligible for this offer.
+                    </p>
+                    <p class="text-lg">
+                        If you have any questions or need assistance, feel free
+                        to reach out to our customer support team. We're here to
+                        help! You can find our contact information on the
+                        <a href="/about" class="text-orange-600 underline"
+                            >About page</a
+                        >.
+                    </p>
+                    <p class="text-lg">
+                        Thank you for choosing FoodRocket! We look forward to
+                        serving you delicious meals and providing you with an
+                        exceptional dining experience. Enjoy your meal!
+                    </p>
+                </div>
+            </main>
+            <div
+                class="my-8 flex h-48 w-full flex-row items-center justify-center"
+            ></div>
+            <footer-element></footer-element>
+        </div>
+        <script src="/promotions/welcome/index.js" type="module"></script>    
+        </script>
+    </body>
+</html>
