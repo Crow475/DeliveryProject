@@ -13,7 +13,17 @@
             defer
         ></script>
         <script
+            src="./components/restaurant-card/restaurant-card.js"
+            type="module"
+            defer
+        ></script>
+        <script
             src="./components/navbar/navbar.js"
+            type="module"
+            defer
+        ></script>
+        <script
+            src="./components/footer/footer.js"
             type="module"
             defer
         ></script>
@@ -40,7 +50,7 @@
                         icon="./icons/hamburger.svg"
                         color="bg-orange-400"
                         shadow="hover:shadow-orange-400/30"
-                        link="/catalog"
+                        link="#fast-food-category"
                     ></category-card-element>
                     <category-card-element
                         title="Pizza"
@@ -48,7 +58,7 @@
                         icon="./icons/pizza.svg"
                         color="bg-red-500"
                         shadow="hover:shadow-red-500/30"
-                        link="/catalog"
+                        link="#pizza-category"
                     ></category-card-element>
                     <category-card-element
                         title="Breakfast"
@@ -56,7 +66,7 @@
                         icon="./icons/egg-fried.svg"
                         color="bg-yellow-400"
                         shadow="hover:shadow-yellow-400/30"
-                        link="/catalog"
+                        link="#breakfast-category"
                     ></category-card-element>
                     <category-card-element
                         title="Vegan"
@@ -64,7 +74,7 @@
                         icon="./icons/leaf.svg"
                         color="bg-lime-400"
                         shadow="hover:shadow-lime-400/30"
-                        link="/catalog"
+                        link="#vegan-category"
                     ></category-card-element>
                     <category-card-element
                         title="Bakery"
@@ -72,7 +82,7 @@
                         icon="./icons/croissant.svg"
                         color="bg-orange-800"
                         shadow="hover:shadow-orange-800/30"
-                        link="/catalog"
+                        link="#bakery-category"
                     ></category-card-element>
                     <category-card-element
                         title="Desserts"
@@ -80,7 +90,7 @@
                         icon="./icons/cake-slice.svg"
                         color="bg-pink-400"
                         shadow="hover:shadow-pink-400/30"
-                        link="/catalog"
+                        link="#desserts-category"
                     ></category-card-element>
                 </ul>
                 <section class="my-10 flex w-full flex-col space-y-6 px-4">
@@ -174,10 +184,158 @@
                         </div>
                     </div>
                 </section>
-                <section class="my-4 flex w-full flex-col px-4">
-                    <h2 class="text-3xl">Fast food</h2>
+                <section class="my-8 flex w-full flex-col px-4">
+                    <h2
+                        class="text-xl font-bold md:text-4xl"
+                        id="fast-food-category"
+                    >
+                        Fast food
+                    </h2>
+                    <div
+                        class="mt-3 flex w-full flex-row items-center justify-start space-x-3 *:w-1/6"
+                    >
+                        <restaurant-card-element
+                            title="McDonald's"
+                            description="Classic American fast food chain"
+                            image="%VITE_IMAGE_PATH%mcdonalds-logo.webp"
+                            delivery-price="0.00"
+                            rating="8.5"
+                            link="/catalog"
+                        ></restaurant-card-element>
+                        <restaurant-card-element
+                            title="KFC"
+                            description="Fried chicken fast food chain"
+                            image="%VITE_IMAGE_PATH%KFC-Logo.webp"
+                            delivery-price="0.00"
+                            rating="8.3"
+                            link="/catalog"
+                        ></restaurant-card-element>
+                        <restaurant-card-element
+                            title="Wendy's"
+                            description="Fast food with a focus on quality"
+                            image="%VITE_IMAGE_PATH%wendys-Logo.webp"
+                            delivery-price="0.00"
+                            rating="8.4"
+                            link="/catalog"
+                        ></restaurant-card-element>
+                        <restaurant-card-element
+                            title="Burger King"
+                            description="Wide variety of burgers"
+                            image="%VITE_IMAGE_PATH%BK-Logo.webp"
+                            delivery-price="0.99"
+                            rating="8.2"
+                            link="/catalog"
+                        ></restaurant-card-element>
+                        <restaurant-card-element
+                            title="Subway"
+                            description="Freshly made sandwiches"
+                            image="%VITE_IMAGE_PATH%subway-Logo.webp"
+                            delivery-price="0.00"
+                            rating="8.1"
+                            link="/catalog"
+                        ></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                    </div>
                 </section>
+                <section class="my-8 flex w-full flex-col px-4">
+                    <h2
+                        class="text-xl font-bold md:text-4xl"
+                        id="pizza-category"
+                    >
+                        Pizza
+                    </h2>
+                    <div
+                        class="mt-3 flex w-full flex-row items-center justify-start space-x-3 *:w-1/6"
+                    >
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                    </div>
+                </section>
+                <section class="my-8 flex w-full flex-col px-4">
+                    <h2
+                        class="text-xl font-bold md:text-4xl"
+                        id="breakfast-category"
+                    >
+                        Breakfast
+                    </h2>
+                    <div
+                        class="mt-3 flex w-full flex-row items-center justify-start space-x-3 *:w-1/6"
+                    >
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                    </div>
+                </section>
+                <section class="my-8 flex w-full flex-col px-4">
+                    <h2
+                        class="text-xl font-bold md:text-4xl"
+                        id="vegan-category"
+                    >
+                        Vegan
+                    </h2>
+                    <div
+                        class="mt-3 flex w-full flex-row items-center justify-start space-x-3 *:w-1/6"
+                    >
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                    </div>
+                </section>
+                <section class="my-8 flex w-full flex-col px-4">
+                    <h2
+                        class="text-xl font-bold md:text-4xl"
+                        id="bakery-category"
+                    >
+                        Bakery
+                    </h2>
+                    <div
+                        class="mt-3 flex w-full flex-row items-center justify-start space-x-3 *:w-1/6"
+                    >
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                    </div>
+                </section>
+                <section class="my-8 flex w-full flex-col px-4">
+                    <h2
+                        class="text-xl font-bold md:text-4xl"
+                        id="desserts-category"
+                    >
+                        Desserts
+                    </h2>
+                    <div
+                        class="mt-3 flex w-full flex-row items-center justify-start space-x-3 *:w-1/6"
+                    >
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                        <restaurant-card-element></restaurant-card-element>
+                    </div>
+                </section>
+                <div
+                    class="my-8 flex h-48 w-full flex-row items-center justify-center"
+                >
+                    <span class="font-display text-3xl font-black">
+                        Enjoy your meal!<br />
+                    </span>
+                </div>
             </main>
+            <footer-element></footer-element>
         </div>
     </body>
 </html>

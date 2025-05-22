@@ -12,6 +12,9 @@ export default defineConfig({
                 main: "src/index.html",
                 navbar: "src/components/navbar/navbar.html",
                 categoryCard: "src/components/category-card/category-card.html",
+                restaurantCard:
+                    "src/components/restaurant-card/restaurant-card.html",
+                footer: "src/components/footer/footer.html",
                 about: "src/about.html",
             },
         },

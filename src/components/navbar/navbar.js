@@ -9,7 +9,7 @@ class Navbar extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({ mode: "open" });
-        shadowRoot.appendChild(navbarTemplate.content);
+        shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
 
         const navbar = shadowRoot.getElementById("navbar");
 
@@ -171,10 +171,13 @@ class Navbar extends HTMLElement {
         }
 
         function darken() {
-            customElements.whenDefined("category-card-element").then(() => {
+            customElements.whenDefined("footer-element").then(() => {
                 const root = document.documentElement;
                 const ccards = document.querySelectorAll(
                     "category-card-element",
+                );
+                const rcards = document.querySelectorAll(
+                    "restaurant-card-element",
                 );
                 const themeSwitchIcon =
                     shadowRoot.getElementById("themeSwitchIcon");
@@ -189,15 +192,24 @@ class Navbar extends HTMLElement {
                         .classList.add("dark");
                 });
 
+                rcards.forEach((rcard) => {
+                    rcard.shadowRoot
+                        .getElementById("rcard")
+                        .classList.add("dark");
+                });
+
                 themeSwitchIcon.src = "./icons/moon.svg";
             });
         }
 
         function lighten() {
-            customElements.whenDefined("category-card-element").then(() => {
+            customElements.whenDefined("footer-element").then(() => {
                 const root = document.documentElement;
                 const ccards = document.querySelectorAll(
                     "category-card-element",
+                );
+                const rcards = document.querySelectorAll(
+                    "restaurant-card-element",
                 );
                 const themeSwitchIcon =
                     shadowRoot.getElementById("themeSwitchIcon");
@@ -209,6 +221,12 @@ class Navbar extends HTMLElement {
                 ccards.forEach((ccard) => {
                     ccard.shadowRoot
                         .getElementById("ccard")
+                        .classList.remove("dark");
+                });
+
+                rcards.forEach((rcard) => {
+                    rcard.shadowRoot
+                        .getElementById("rcard")
                         .classList.remove("dark");
                 });
 

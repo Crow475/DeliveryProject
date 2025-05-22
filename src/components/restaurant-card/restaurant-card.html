@@ -1,0 +1,51 @@
+<link href="../../styles.css" rel="stylesheet" />
+<a
+    class="dark:shadow-white-/10 flex flex-col rounded-xl bg-neutral-100 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl dark:bg-neutral-800 dark:hover:shadow-white/30"
+    href="/catalog"
+    id="rcard"
+>
+    <img
+        src="%VITE_IMAGE_PATH%mcdonalds-logo.webp"
+        class="h-40 w-full rounded-t-xl object-cover"
+        id="rcardImage"
+    />
+    <div class="flex flex-col items-start justify-start p-4">
+        <h3 class="text-base md:text-2xl" id="rcardTitle">McDonald's</h3>
+        <p class="text-xs md:text-sm" id="rcardDescription">
+            Classic American fast food chain
+        </p>
+        <hr class="my-2 w-full border-dashed border-neutral-400" />
+        <div class="flex w-full flex-row items-center justify-between">
+            <div
+                class="flex flex-row items-center justify-start space-x-1 rounded-3xl bg-orange-600 px-1"
+            >
+                <img
+                    src="./icons/package.svg"
+                    width="16"
+                    height="16"
+                    class="invert select-none"
+                />
+                <span
+                    class="text-xs text-white select-none md:text-sm"
+                    id="rcardDeliveryPrice"
+                >
+                    0.00$
+                </span>
+            </div>
+            <div class="flex flex-row items-center justify-start space-x-1">
+                <span
+                    class="text-xs md:text-sm dark:text-white"
+                    id="rcardRating"
+                >
+                    8.5
+                </span>
+                <img
+                    src="./icons/star.svg"
+                    width="16"
+                    height="16"
+                    class="select-none dark:invert"
+                />
+            </div>
+        </div>
+    </div>
+</a>
