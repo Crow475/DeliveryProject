@@ -1,0 +1,64 @@
+{
+    "restaurants": [
+        {
+            "id": 1,
+            "categoryId": 1,
+            "name": "McDonald's",
+            "description": "Classic American fast food chain",
+            "image": "mcdonalds-logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.5",
+            "link": "/catalog"
+        },
+        {
+            "id": 2,
+            "categoryId": 1,
+            "name": "KFC",
+            "description": "Fried chicken fast food chain",
+            "image": "KFC-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.3",
+            "link": "/catalog"
+        },
+        {
+            "id": 3,
+            "categoryId": 1,
+            "name": "Wendy's",
+            "description": "Fast food with a focus on quality",
+            "image": "wendys-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.4",
+            "link": "/catalog"
+        },
+        {
+            "id": 4,
+            "categoryId": 1,
+            "name": "Burger King",
+            "description": "Wide variety of burgers and sides",
+            "image": "BK-Logo.webp",
+            "deliveryPrice": "0.99",
+            "rating": "8.2",
+            "link": "/catalog"
+        },
+        {
+            "id": 5,
+            "categoryId": 1,
+            "name": "Subway",
+            "description": "Freshly made sandwiches",
+            "image": "subway-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.1",
+            "link": "/catalog"
+        },
+        {
+            "id": 1,
+            "categoryId": 1,
+            "name": "McDonald's",
+            "description": "Classic American fast food chain",
+            "image": "mcdonalds-logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.5",
+            "link": "/catalog"
+        }
+    ]
+}

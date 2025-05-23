@@ -94,25 +94,37 @@ class Navbar extends HTMLElement {
             "themeSwitchMobile-auto",
         );
 
-        if (!("theme" in localStorage)) {
-            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                darken();
-            } else {
-                lighten();
+        function initialLoad() {
+            if (!("theme" in localStorage)) {
+                if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    darken();
+                } else {
+                    lighten();
+                }
+
+                themeSwitchAuto.checked = true;
+                themeSwitchMobileAuto.checked = true;
             }
 
-            themeSwitchAuto.checked = true;
-            themeSwitchMobileAuto.checked = true;
+            if (localStorage.getItem("theme") === "dark") {
+                darken();
+                themeSwitchDark.checked = true;
+                themeSwitchMobileDark.checked = true;
+            } else if (localStorage.getItem("theme") === "light") {
+                lighten();
+                themeSwitchLight.checked = true;
+                themeSwitchMobileLight.checked = true;
+            }
         }
 
-        if (localStorage.getItem("theme") === "dark") {
-            darken();
-            themeSwitchDark.checked = true;
-            themeSwitchMobileDark.checked = true;
-        } else if (localStorage.getItem("theme") === "light") {
-            lighten();
-            themeSwitchLight.checked = true;
-            themeSwitchMobileLight.checked = true;
+        if (document.readyState !== "loading") {
+            // console.log("Page already loaded");
+            initialLoad();
+        } else {
+            document.addEventListener("DOMContentLoaded", function () {
+                // console.log("Page loaded");
+                initialLoad();
+            });
         }
 
         themeSwitchDark.addEventListener("click", function (event) {
@@ -171,8 +183,6 @@ class Navbar extends HTMLElement {
 
         function darken() {
             const root = document.documentElement;
-            const ccards = document.querySelectorAll("category-card-element");
-            const rcards = document.querySelectorAll("restaurant-card-element");
             const themeSwitchIcon =
                 shadowRoot.getElementById("themeSwitchIcon");
 
@@ -180,23 +190,27 @@ class Navbar extends HTMLElement {
             navbar.classList.add("dark");
             mobileMenu.classList.add("dark");
 
-            customElements.whenDefined("category-card-element").then(() => {
-                waitForElement("category-card-element").then(() => {
-                    ccards.forEach((ccard) => {
-                        ccard.shadowRoot
-                            .getElementById("ccard")
-                            .classList.add("dark");
-                    });
+            waitForElement("category-card-element").then(() => {
+                const ccards = document.querySelectorAll(
+                    "category-card-element",
+                );
+                // console.log("category-card-element loaded");
+                ccards.forEach((ccard) => {
+                    ccard.shadowRoot
+                        .getElementById("ccard")
+                        .classList.add("dark");
                 });
             });
 
-            customElements.whenDefined("restaurant-card-element").then(() => {
-                waitForElement("restaurant-card-element").then(() => {
-                    rcards.forEach((rcard) => {
-                        rcard.shadowRoot
-                            .getElementById("rcard")
-                            .classList.add("dark");
-                    });
+            waitForElement("restaurant-card-element").then(() => {
+                const rcards = document.querySelectorAll(
+                    "restaurant-card-element",
+                );
+                // console.log("restaurant-card-element loaded");
+                rcards.forEach((rcard) => {
+                    rcard.shadowRoot
+                        .getElementById("rcard")
+                        .classList.add("dark");
                 });
             });
 
@@ -205,8 +219,6 @@ class Navbar extends HTMLElement {
 
         function lighten() {
             const root = document.documentElement;
-            const ccards = document.querySelectorAll("category-card-element");
-            const rcards = document.querySelectorAll("restaurant-card-element");
             const themeSwitchIcon =
                 shadowRoot.getElementById("themeSwitchIcon");
 
@@ -214,23 +226,27 @@ class Navbar extends HTMLElement {
             navbar.classList.remove("dark");
             mobileMenu.classList.remove("dark");
 
-            customElements.whenDefined("category-card-element").then(() => {
-                waitForElement("category-card-element").then(() => {
-                    ccards.forEach((ccard) => {
-                        ccard.shadowRoot
-                            .getElementById("ccard")
-                            .classList.remove("dark");
-                    });
+            waitForElement("category-card-element").then(() => {
+                const ccards = document.querySelectorAll(
+                    "category-card-element",
+                );
+                // console.log("category-card-element loaded");
+                ccards.forEach((ccard) => {
+                    ccard.shadowRoot
+                        .getElementById("ccard")
+                        .classList.remove("dark");
                 });
             });
 
-            customElements.whenDefined("restaurant-card-element").then(() => {
-                waitForElement("restaurant-card-element").then(() => {
-                    rcards.forEach((rcard) => {
-                        rcard.shadowRoot
-                            .getElementById("rcard")
-                            .classList.remove("dark");
-                    });
+            waitForElement("restaurant-card-element").then(() => {
+                const rcards = document.querySelectorAll(
+                    "restaurant-card-element",
+                );
+                // console.log("restaurant-card-element loaded");
+                rcards.forEach((rcard) => {
+                    rcard.shadowRoot
+                        .getElementById("rcard")
+                        .classList.remove("dark");
                 });
             });
 

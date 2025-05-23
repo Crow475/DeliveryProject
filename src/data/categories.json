@@ -1,0 +1,58 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "title": "Fast Food",
+            "description": "Burgers, fries, and more, delivered fast and hot.",
+            "icon": "/icons/hamburger.svg",
+            "color": "bg-orange-400",
+            "shadow": "hover:shadow-orange-400/30",
+            "link": "#fast-food-category"
+        },
+        {
+            "id": 2,
+            "title": "Pizza",
+            "description": "Delicious pizzas with for the whole company.",
+            "icon": "/icons/pizza.svg",
+            "color": "bg-red-500",
+            "shadow": "hover:shadow-red-500/30",
+            "link": "#pizza-category"
+        },
+        {
+            "id": 3,
+            "title": "Breakfast",
+            "description": "Start your day with a delicious breakfast.",
+            "icon": "/icons/egg-fried.svg",
+            "color": "bg-yellow-400",
+            "shadow": "hover:shadow-yellow-400/30",
+            "link": "#breakfast-category"
+        },
+        {
+            "id": 4,
+            "title": "Vegan",
+            "description": "Healthy and delicious vegan options.",
+            "icon": "/icons/leaf.svg",
+            "color": "bg-lime-400",
+            "shadow": "hover:shadow-lime-400/30",
+            "link": "#vegan-category"
+        },
+        {
+            "id": 5,
+            "title": "Bakery",
+            "description": "Freshly baked goods delivered to you.",
+            "icon": "/icons/croissant.svg",
+            "color": "bg-orange-800",
+            "shadow": "hover:shadow-orange-800/30",
+            "link": "#bakery-category"
+        },
+        {
+            "id": 6,
+            "title": "Desserts",
+            "description": "Sweet treats to satisfy your cravings.",
+            "icon": "/icons/cake-slice.svg",
+            "color": "bg-pink-400",
+            "shadow": "hover:shadow-pink-400/30",
+            "link": "#desserts-category"
+        }
+    ]
+}
