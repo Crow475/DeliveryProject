@@ -17,6 +17,7 @@ export default defineConfig({
                     "src/components/restaurant-card/restaurant-card.html",
                 footer: "src/components/footer/footer.html",
                 about: "src/about/index.html",
+                catalog: "src/catalog/index.html",
                 promotions_welcome: "src/promotions/welcome/index.html",
                 promotions_burgers25: "src/promotions/burgers25/index.html",
             },

@@ -9,40 +9,80 @@
 
         <script type="module">
             const cListElement = document.getElementById("category-list");
-            import * as data from "/data/categories.json";
 
-            const categories = data.categories;
+            fetch("/data/categories.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    const categories = data.categories;
 
-            for (const category of categories) {
-                const card = document.createElement("category-card-element");
-                card.setAttribute("title", category.title);
-                card.setAttribute("description", category.description);
-                card.setAttribute("icon", category.icon);
-                card.setAttribute("color", category.color);
-                card.setAttribute("shadow", category.shadow);
-                card.setAttribute("link", category.link);
-                cListElement.appendChild(card);
-            }
+                    for (const category of categories) {
+                        const card = document.createElement(
+                            "category-card-element",
+                        );
+                        card.setAttribute("title", category.title);
+                        card.setAttribute("description", category.description);
+                        card.setAttribute("icon", category.icon);
+                        card.setAttribute("color", category.color);
+                        card.setAttribute("shadow", category.shadow);
+                        card.setAttribute("link", category.link);
+                        cListElement.appendChild(card);
+                    }
+                });
         </script>
         <script type="module">
-            const rListElement = document.getElementById("fast-food-list");
-            import * as data from "/data/restaurants.json";
+            const r1ListElement = document.getElementById("fast-food-list");
+            const r2ListElement = document.getElementById("pizza-list");
+            const r3ListElement = document.getElementById("breakfast-list");
+            const r4ListElement = document.getElementById("vegan-list");
+            const r5ListElement = document.getElementById("bakery-list");
+            const r6ListElement = document.getElementById("desserts-list");
+            fetch("/data/restaurants.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    const restaurants = data.restaurants;
+                    const root = document.documentElement;
 
-            const restaurants = data.restaurants;
+                    for (const restaurant of restaurants) {
+                        const card = document.createElement(
+                            "restaurant-card-element",
+                        );
+                        card.setAttribute("title", restaurant.name);
+                        card.setAttribute(
+                            "description",
+                            restaurant.description,
+                        );
+                        card.setAttribute(
+                            "image",
+                            `%VITE_IMAGE_PATH%${restaurant.image}`,
+                        );
+                        card.setAttribute(
+                            "delivery-price",
+                            restaurant.deliveryPrice,
+                        );
+                        card.setAttribute("rating", restaurant.rating);
+                        card.setAttribute("link", restaurant.link);
 
-            for (const restaurant of restaurants) {
-                const card = document.createElement("restaurant-card-element");
-                card.setAttribute("title", restaurant.name);
-                card.setAttribute("description", restaurant.description);
-                card.setAttribute(
-                    "image",
-                    `%VITE_IMAGE_PATH%${restaurant.image}`,
-                );
-                card.setAttribute("delivery-price", restaurant.deliveryPrice);
-                card.setAttribute("rating", restaurant.rating);
-                card.setAttribute("link", restaurant.link);
-                rListElement.appendChild(card);
-            }
+                        if (root.classList.contains("dark")) {
+                            card.shadowRoot
+                                .querySelector("#rcard")
+                                .classList.add("dark");
+                        }
+
+                        if (restaurant.categoryId === 1) {
+                            r1ListElement.appendChild(card);
+                        } else if (restaurant.categoryId === 2) {
+                            r2ListElement.appendChild(card);
+                        } else if (restaurant.categoryId === 3) {
+                            r3ListElement.appendChild(card);
+                        } else if (restaurant.categoryId === 4) {
+                            r4ListElement.appendChild(card);
+                        } else if (restaurant.categoryId === 5) {
+                            r5ListElement.appendChild(card);
+                        } else if (restaurant.categoryId === 6) {
+                            r6ListElement.appendChild(card);
+                        }
+                    }
+                });
         </script>
         <script
             src="/components/category-card/category-card.js"
@@ -187,14 +227,7 @@
                     <div
                         class="mt-3 grid w-full grid-cols-2 items-center gap-3 space-x-0 *:w-full md:flex md:flex-row md:justify-start md:gap-0 md:space-x-3 md:*:w-1/6"
                         id="pizza-list"
-                    >
-                        <restaurant-card-element></restaurant-card-element>
-                        <restaurant-card-element></restaurant-card-element>
-                        <restaurant-card-element></restaurant-card-element>
-                        <restaurant-card-element></restaurant-card-element>
-                        <restaurant-card-element></restaurant-card-element>
-                        <restaurant-card-element></restaurant-card-element>
-                    </div>
+                    ></div>
                 </section>
                 <section class="my-8 flex w-full flex-col px-4">
                     <h2
@@ -205,6 +238,7 @@
                     </h2>
                     <div
                         class="mt-3 grid w-full grid-cols-2 items-center gap-3 space-x-0 *:w-full md:flex md:flex-row md:justify-start md:gap-0 md:space-x-3 md:*:w-1/6"
+                        id="breakfast-list"
                     >
                         <restaurant-card-element></restaurant-card-element>
                         <restaurant-card-element></restaurant-card-element>
@@ -223,6 +257,7 @@
                     </h2>
                     <div
                         class="mt-3 grid w-full grid-cols-2 items-center gap-3 space-x-0 *:w-full md:flex md:flex-row md:justify-start md:gap-0 md:space-x-3 md:*:w-1/6"
+                        id="vegan-list"
                     >
                         <restaurant-card-element></restaurant-card-element>
                         <restaurant-card-element></restaurant-card-element>
@@ -241,6 +276,7 @@
                     </h2>
                     <div
                         class="mt-3 grid w-full grid-cols-2 items-center gap-3 space-x-0 *:w-full md:flex md:flex-row md:justify-start md:gap-0 md:space-x-3 md:*:w-1/6"
+                        id="bakery-list"
                     >
                         <restaurant-card-element></restaurant-card-element>
                         <restaurant-card-element></restaurant-card-element>
@@ -259,6 +295,7 @@
                     </h2>
                     <div
                         class="mt-3 grid w-full grid-cols-2 items-center gap-3 space-x-0 *:w-full md:flex md:flex-row md:justify-start md:gap-0 md:space-x-3 md:*:w-1/6"
+                        id="desserts-list"
                     >
                         <restaurant-card-element></restaurant-card-element>
                         <restaurant-card-element></restaurant-card-element>

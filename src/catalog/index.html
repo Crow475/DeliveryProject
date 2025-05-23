@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FoodRocket | Catalog</title>
+        <link rel="stylesheet" href="/styles.css" />
+        <link rel="icon" type="image/svg+xml" href="/logo_color.svg" />
+
+        <script type="module" defer src="/catalog/catalog.js"></script>
+        <script
+            src="/components/restaurant-card/restaurant-card.js"
+            type="module"
+            defer
+        ></script>
+        <script src="/components/navbar/navbar.js" type="module" defer></script>
+        <script src="/components/footer/footer.js" type="module" defer></script>
+    </head>
+    <body>
+        <navbar-element></navbar-element>
+        <div class="container p-1">
+            <main>
+                <div
+                    class="relative flex w-full flex-col items-start justify-start px-4 py-4"
+                >
+                    <h1 class="font-display text-2xl font-black md:text-5xl">
+                        All restaurants
+                    </h1>
+                    <div
+                        class="mt-8 flex flex-row items-center justify-start space-x-2"
+                    >
+                        <span class="text-lg md:text-xl"> Sort by: </span>
+                        <select
+                            name="sort"
+                            id="sort"
+                            class="rounded-lg border-2 border-neutral-400 bg-neutral-100 p-1 text-sm dark:bg-neutral-800 dark:text-white"
+                        >
+                            <option value="name">Name</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                    <div
+                        class="my-4 grid grid-cols-2 gap-4 md:grid-cols-6"
+                        id="restaurant-cards-container"
+                    ></div>
+                </div>
+                <div
+                    class="my-8 flex h-48 w-full flex-row items-center justify-center"
+                ></div>
+            </main>
+            <footer-element></footer-element>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+{
+    "restaurants": [
+        {
+            "id": 1,
+            "categoryId": 1,
+            "name": "McDonald's",
+            "description": "Classic American fast food chain",
+            "image": "mcdonalds-logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.5",
+            "link": "/catalog/"
+        },
+        {
+            "id": 2,
+            "categoryId": 1,
+            "name": "KFC",
+            "description": "Fried chicken fast food chain",
+            "image": "KFC-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.3",
+            "link": "/catalog/"
+        },
+        {
+            "id": 3,
+            "categoryId": 1,
+            "name": "Wendy's",
+            "description": "Fast food with a focus on quality",
+            "image": "wendys-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.4",
+            "link": "/catalog/"
+        },
+        {
+            "id": 4,
+            "categoryId": 1,
+            "name": "Burger King",
+            "description": "Wide variety of burgers and sides",
+            "image": "BK-Logo.webp",
+            "deliveryPrice": "0.99",
+            "rating": "8.2",
+            "link": "/catalog/"
+        },
+        {
+            "id": 5,
+            "categoryId": 1,
+            "name": "Subway",
+            "description": "Freshly made sandwiches",
+            "image": "subway-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.1",
+            "link": "/catalog/"
+        },
+        {
+            "id": 6,
+            "categoryId": 2,
+            "name": "Domino's Pizza",
+            "description": "American pizza for everyone",
+            "image": "dominos-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.4",
+            "link": "/catalog/"
+        },
+        {
+            "id": 7,
+            "categoryId": 2,
+            "name": "Pizza Hut",
+            "description": "Famous for its pizza and pasta",
+            "image": "PH-Logo.webp",
+            "deliveryPrice": "0.49",
+            "rating": "8.6",
+            "link": "/catalog/"
+        },
+        {
+            "id": 8,
+            "categoryId": 2,
+            "name": "Papa John's",
+            "description": "Quality pizza with fresh ingredients",
+            "image": "PJ-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "9.0",
+            "link": "/catalog/"
+        },
+        {
+            "id": 9,
+            "categoryId": 2,
+            "name": "Little Caesars",
+            "description": "Hot-n-Ready pizza for everyone",
+            "image": "LC-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "7.9",
+            "link": "/catalog/"
+        },
+        {
+            "id": 10,
+            "categoryId": 2,
+            "name": "Sbarro",
+            "description": "Italian-American fast food chain",
+            "image": "sbarro-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.1",
+            "link": "/catalog/"
+        },
+        {
+            "id": 11,
+            "categoryId": 2,
+            "name": "Pizza Express",
+            "description": "Italian pizza chain",
+            "image": "PE-Logo.webp",
+            "deliveryPrice": "0.99",
+            "rating": "9.3",
+            "link": "/catalog/"
+        },
+        {
+            "id": 12,
+            "categoryId": 1,
+            "name": "Taco Bell",
+            "description": "Mexican-inspired fast food chain",
+            "image": "TB-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "9.6",
+            "link": "/catalog/"
+        }
+    ]
+}

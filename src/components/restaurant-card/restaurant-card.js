@@ -1,6 +1,6 @@
 const rcardTemplate = document.createElement("template");
 
-const resp = await fetch("./components/restaurant-card/restaurant-card.html");
+const resp = await fetch("/components/restaurant-card/restaurant-card.html");
 const htmlrequested = await resp.text();
 
 rcardTemplate.innerHTML = htmlrequested;
