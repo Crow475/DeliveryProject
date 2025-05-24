@@ -1,0 +1,37 @@
+<link href="/styles.css" rel="stylesheet" />
+<li
+    class="flex w-full flex-col items-end space-y-2 rounded-xl bg-neutral-100 p-4 shadow-md md:flex-row md:items-center md:justify-between md:space-y-0 dark:bg-neutral-800"
+    id="fitem"
+>
+    <div class="itemsstart flex flex-row justify-start space-x-3">
+        <img
+            src="%VITE_IMAGE_PATH%/MD-i1.avif"
+            class="h-24 w-24 rounded-xl object-cover"
+            id="fitem-image"
+        />
+        <div class="flex flex-col items-start justify-start space-y-1">
+            <span class="text-lg font-bold md:text-2xl" id="fitem-name">
+                Big Tasty
+            </span>
+            <p
+                class="line-clamp-3 w-auto text-sm text-neutral-500 md:line-clamp-2 md:w-90 md:text-base"
+                id="fitem-description"
+            >
+                A large burger with a special sauce, lettuce, cheese, pickles,
+                onions, and a sesame seed bun.
+            </p>
+        </div>
+    </div>
+    <div
+        class="flex w-full flex-row justify-between space-y-0 space-x-2 md:w-auto md:flex-col md:items-end md:justify-start md:space-y-2 md:space-x-0"
+    >
+        <span class="ms-6 text-lg font-bold md:ms-0 md:text-xl" id="fitem-price"
+            >5.99$</span
+        >
+        <button
+            class="flex flex-row items-center justify-center space-x-2 rounded-lg bg-orange-600 px-2 py-1 text-white"
+        >
+            <span class="font-bold">Add to Cart</span>
+        </button>
+    </div>
+</li>

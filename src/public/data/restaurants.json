@@ -8,7 +8,7 @@
             "image": "mcdonalds-logo.webp",
             "deliveryPrice": "0.00",
             "rating": "8.5",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=1"
         },
         {
             "id": 2,
@@ -18,7 +18,7 @@
             "image": "KFC-Logo.webp",
             "deliveryPrice": "0.00",
             "rating": "8.3",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=2"
         },
         {
             "id": 3,
@@ -28,7 +28,7 @@
             "image": "wendys-Logo.webp",
             "deliveryPrice": "0.00",
             "rating": "8.4",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=3"
         },
         {
             "id": 4,
@@ -38,7 +38,7 @@
             "image": "BK-Logo.webp",
             "deliveryPrice": "0.99",
             "rating": "8.2",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=4"
         },
         {
             "id": 5,
@@ -48,7 +48,7 @@
             "image": "subway-Logo.webp",
             "deliveryPrice": "0.00",
             "rating": "8.1",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=5"
         },
         {
             "id": 6,
@@ -58,7 +58,7 @@
             "image": "dominos-Logo.webp",
             "deliveryPrice": "0.00",
             "rating": "8.4",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=6"
         },
         {
             "id": 7,
@@ -68,7 +68,7 @@
             "image": "PH-Logo.webp",
             "deliveryPrice": "0.49",
             "rating": "8.6",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=7"
         },
         {
             "id": 8,
@@ -78,7 +78,7 @@
             "image": "PJ-Logo.webp",
             "deliveryPrice": "0.00",
             "rating": "9.0",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=8"
         },
         {
             "id": 9,
@@ -88,7 +88,7 @@
             "image": "LC-Logo.webp",
             "deliveryPrice": "0.00",
             "rating": "7.9",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=9"
         },
         {
             "id": 10,
@@ -98,7 +98,7 @@
             "image": "sbarro-Logo.webp",
             "deliveryPrice": "0.00",
             "rating": "8.1",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=10"
         },
         {
             "id": 11,
@@ -108,7 +108,7 @@
             "image": "PE-Logo.webp",
             "deliveryPrice": "0.99",
             "rating": "9.3",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=11"
         },
         {
             "id": 12,
@@ -118,7 +118,7 @@
             "image": "TB-Logo.webp",
             "deliveryPrice": "0.00",
             "rating": "9.6",
-            "link": "/catalog/"
+            "link": "/restaurant/#id=12"
         }
     ]
 }

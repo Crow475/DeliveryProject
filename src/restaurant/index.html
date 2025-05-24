@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FoodRocket | About Us</title>
+        <link rel="stylesheet" href="/styles.css" />
+        <link rel="icon" type="image/svg+xml" href="/logo_color.svg" />
+
+        <script src="/components/navbar/navbar.js" type="module" defer></script>
+        <script src="/components/footer/footer.js" type="module" defer></script>
+        <script
+            src="/components/food-item/food-item.js"
+            type="module"
+            defer
+        ></script>
+        <script type="module">
+            const titleElement = document.getElementById("title");
+            const descriptionElement = document.getElementById("description");
+            const logoElement = document.getElementById("restaurant-logo");
+            const ratingElement = document.getElementById("restaurant-rating");
+
+            fetch("/data/restaurants.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    const restaurants = data.restaurants;
+                    const url = window.location.href;
+                    console.log(url);
+                    console.log(restaurants);
+
+                    if (url.includes("restaurant") && url.includes("#id=")) {
+                        const id = url.split("#id=")[1];
+
+                        const restaurant = restaurants.find(
+                            (r) => r.id === parseInt(id),
+                        );
+
+                        if (restaurant) {
+                            titleElement.textContent = restaurant.name;
+                            descriptionElement.textContent =
+                                restaurant.description;
+
+                            logoElement.src = `${import.meta.env.VITE_IMAGE_PATH}${restaurant.image}`;
+                            ratingElement.textContent = restaurant.rating;
+
+                            fetch("/data/items.json")
+                                .then((response) => response.json())
+                                .then((itemsData) => {
+                                    const items = itemsData.byRestaurant.find(
+                                        (item) =>
+                                            item.restaurantId === restaurant.id,
+                                    ).items;
+
+                                    const root = document.documentElement;
+
+                                    items.forEach((item) => {
+                                        const foodItemElement =
+                                            document.createElement(
+                                                "food-item-element",
+                                            );
+                                        foodItemElement.setAttribute(
+                                            "name",
+                                            item.name,
+                                        );
+                                        foodItemElement.setAttribute(
+                                            "description",
+                                            item.description,
+                                        );
+                                        foodItemElement.setAttribute(
+                                            "price",
+                                            item.price,
+                                        );
+                                        foodItemElement.setAttribute(
+                                            "image",
+                                            `${import.meta.env.VITE_IMAGE_PATH}${item.image}`,
+                                        );
+
+                                        if (root.classList.contains("dark")) {
+                                            foodItemElement.shadowRoot
+                                                .querySelector("#fitem")
+                                                .classList.add("dark");
+                                        }
+
+                                        document
+                                            .getElementById("menu-list")
+                                            .appendChild(foodItemElement);
+                                    });
+                                })
+                                .catch((error) => {
+                                    console.error(
+                                        "Error fetching items:",
+                                        error,
+                                    );
+                                });
+                        } else {
+                            titleElement.textContent =
+                                "404 - Restaurant Not Found";
+                        }
+                    } else {
+                        titleElement.textContent = "404";
+                    }
+                });
+        </script>
+    </head>
+    <body>
+        <navbar-element></navbar-element>
+        <div class="container p-1">
+            <main>
+                <div
+                    class="relative flex w-full flex-col items-start justify-start px-4 py-4 md:px-20"
+                >
+                    <div
+                        class="flex w-full flex-col-reverse items-start justify-start rounded-xl bg-neutral-100 p-4 shadow-lg transition-colors duration-200 md:flex-row md:items-center md:justify-between dark:bg-neutral-800"
+                    >
+                        <div
+                            class="px-o flex flex-col items-start justify-start space-y-1 py-2 md:space-y-2 md:p-4"
+                        >
+                            <h1
+                                class="font-display text-2xl font-black md:text-5xl"
+                                id="title"
+                            >
+                                McDonald's
+                            </h1>
+                            <p
+                                id="description"
+                                class="text-lg text-neutral-500"
+                            >
+                                Classic American fast food chain
+                            </p>
+                            <div
+                                class="flex flex-row items-center justify-start space-x-2"
+                            >
+                                <span
+                                    id="restaurant-rating"
+                                    class="text-sm md:text-base"
+                                >
+                                </span>
+                                <img
+                                    src="/icons/star.svg"
+                                    class="h-6 w-6 dark:invert"
+                                />
+                            </div>
+                        </div>
+                        <img
+                            src=""
+                            class="h-60 w-90 rounded-xl object-cover"
+                            id="restaurant-logo"
+                        />
+                    </div>
+                    <div
+                        class="my-8 flex w-full flex-col items-start justify-start space-x-2"
+                    >
+                        <h2
+                            class="font-display text-2xl font-black md:text-4xl"
+                        >
+                            Menu
+                        </h2>
+                        <ul
+                            class="flex w-full flex-col items-start justify-start space-y-4 py-8 *:w-full"
+                            id="menu-list"
+                        ></ul>
+                    </div>
+                </div>
+                <div
+                    class="my-12 flex h-48 w-full flex-row items-center justify-center"
+                >
+                    <span class="font-display text-3xl font-black">
+                        Enjoy your meal!<br />
+                    </span>
+                </div>
+            </main>
+            <footer-element></footer-element>
+        </div>
+    </body>
+</html>

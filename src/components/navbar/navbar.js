@@ -214,6 +214,16 @@ class Navbar extends HTMLElement {
                 });
             });
 
+            waitForElement("food-item-element").then(() => {
+                const fitems = document.querySelectorAll("food-item-element");
+                // console.log("food-item-element loaded");
+                fitems.forEach((fitem) => {
+                    fitem.shadowRoot
+                        .getElementById("fitem")
+                        .classList.add("dark");
+                });
+            });
+
             themeSwitchIcon.src = "/icons/moon.svg";
         }
 
@@ -246,6 +256,16 @@ class Navbar extends HTMLElement {
                 rcards.forEach((rcard) => {
                     rcard.shadowRoot
                         .getElementById("rcard")
+                        .classList.remove("dark");
+                });
+            });
+
+            waitForElement("food-item-element").then(() => {
+                const fitems = document.querySelectorAll("food-item-element");
+                // console.log("food-item-element loaded");
+                fitems.forEach((fitem) => {
+                    fitem.shadowRoot
+                        .getElementById("fitem")
                         .classList.remove("dark");
                 });
             });
