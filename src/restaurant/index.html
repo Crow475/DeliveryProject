@@ -74,6 +74,14 @@
                                             "image",
                                             `${import.meta.env.VITE_IMAGE_PATH}${item.image}`,
                                         );
+                                        foodItemElement.setAttribute(
+                                            "item-id",
+                                            item.id,
+                                        );
+                                        foodItemElement.setAttribute(
+                                            "restaurant-id",
+                                            restaurant.id,
+                                        );
 
                                         if (root.classList.contains("dark")) {
                                             foodItemElement.shadowRoot

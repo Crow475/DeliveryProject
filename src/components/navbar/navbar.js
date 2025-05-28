@@ -1,13 +1,21 @@
+import "/components/cart-restaurant/cart-restaurant";
+
 const navbarTemplate = document.createElement("template");
+const cartDialogTemplate = document.createElement("template");
 
 const resp = await fetch("/components/navbar/navbar.html");
 const htmlrequested = await resp.text();
 
+const cartDialogResp = await fetch("/components/cart-dialog/cart-dialog.html");
+const cartDialogHtml = await cartDialogResp.text();
+
 navbarTemplate.innerHTML = htmlrequested;
+cartDialogTemplate.innerHTML = cartDialogHtml;
 
 class Navbar extends HTMLElement {
     constructor() {
         super();
+
         const shadowRoot = this.attachShadow({ mode: "open" });
         shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
 
@@ -20,6 +28,21 @@ class Navbar extends HTMLElement {
         );
         const themeSwitchButton =
             shadowRoot.getElementById("themeSwitchButton");
+
+        const cartPlaceholder = shadowRoot.getElementById("dialog-placeholder");
+        cartPlaceholder.innerHTML = cartDialogTemplate.innerHTML;
+
+        const cartButton = shadowRoot.getElementById("cartButton");
+        const cartNotification = shadowRoot.getElementById("cartNotification");
+        const cartDropdown = shadowRoot.getElementById("cartDropdown");
+        const cartCloseButton = shadowRoot.getElementById("cartCloseButton");
+        const cartItemList = shadowRoot.getElementById("cartItemsList");
+        const clearCartButton = shadowRoot.getElementById("clearCartButton");
+        const cartTotaElement = shadowRoot.getElementById("cartTotal");
+
+        let cartData = JSON.parse(
+            localStorage.getItem("cart") || '{"cart": []}',
+        );
 
         const mobileMenuButton = shadowRoot.getElementById("mobileMenuButton");
         const mobileMenu = shadowRoot.getElementById("mobileMenu");
@@ -72,6 +95,33 @@ class Navbar extends HTMLElement {
             }
         });
 
+        cartButton.addEventListener("click", function (event) {
+            updateCart();
+
+            cartDropdown.showModal();
+            if (!themeSwitchDropdown.classList.contains("hidden")) {
+                themeSwitchDropdown.classList.add("hidden");
+            }
+
+            document.body.style.overflow = "hidden";
+        });
+
+        cartCloseButton.addEventListener("click", function (event) {
+            cartDropdown.close();
+
+            document.body.style.overflow = "auto";
+        });
+
+        clearCartButton.addEventListener("click", function (event) {
+            cartData.cart = [];
+            localStorage.setItem("cart", JSON.stringify(cartData));
+            updateCart();
+        });
+
+        window.addEventListener("cart-updated", function (event) {
+            updateCart();
+        });
+
         // window.addEventListener("click", function (event) {
         //     if (
         //         !themeSwitchButton.contains(event.target) &&
@@ -95,6 +145,7 @@ class Navbar extends HTMLElement {
         );
 
         function initialLoad() {
+            updateCart();
             if (!("theme" in localStorage)) {
                 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
                     darken();
@@ -169,6 +220,8 @@ class Navbar extends HTMLElement {
             root.classList.remove("dark");
             navbar.classList.remove("dark");
             mobileMenu.classList.remove("dark");
+            cartPlaceholder.classList.remove("dark");
+
             localStorage.removeItem("theme");
 
             themeSwitchAuto.checked = true;
@@ -189,6 +242,7 @@ class Navbar extends HTMLElement {
             root.classList.add("dark");
             navbar.classList.add("dark");
             mobileMenu.classList.add("dark");
+            cartPlaceholder.classList.add("dark");
 
             waitForElement("category-card-element").then(() => {
                 const ccards = document.querySelectorAll(
@@ -235,6 +289,7 @@ class Navbar extends HTMLElement {
             root.classList.remove("dark");
             navbar.classList.remove("dark");
             mobileMenu.classList.remove("dark");
+            cartPlaceholder.classList.remove("dark");
 
             waitForElement("category-card-element").then(() => {
                 const ccards = document.querySelectorAll(
@@ -271,6 +326,69 @@ class Navbar extends HTMLElement {
             });
 
             themeSwitchIcon.src = "/icons/sun.svg";
+        }
+
+        function updateCart() {
+            cartData = JSON.parse(
+                localStorage.getItem("cart") || '{"cart": []}',
+            );
+
+            if (cartData.cart.length === 0) {
+                cartItemList.innerHTML = `
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <span class="text-xl font-display font-black text-center">Your cart is empty</span>
+                    </div>
+                `;
+
+                cartNotification.classList.add("hidden");
+
+                cartTotaElement.textContent = "0.00$";
+            } else {
+                cartItemList.innerHTML = "";
+                cartNotification.classList.remove("hidden");
+
+                fetch("/data/restaurants.json")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        const restaurantList = data.restaurants;
+                        let cartTotal = 0;
+
+                        console.log(restaurantList);
+
+                        cartData.cart.forEach((item) => {
+                            const CartRestaurantElement =
+                                document.createElement(
+                                    "cart-restaurant-element",
+                                );
+
+                            const name = restaurantList.find(
+                                (restaurant) =>
+                                    restaurant.id === item.restaurantId,
+                            );
+
+                            CartRestaurantElement.setAttribute(
+                                "name",
+                                name ? name.name : "Unknown Restaurant",
+                            );
+
+                            CartRestaurantElement.setAttribute(
+                                "items",
+                                JSON.stringify(item.items),
+                            );
+
+                            cartItemList.appendChild(CartRestaurantElement);
+
+                            item.items.forEach((item) => {
+                                item.quantity = parseInt(item.quantity, 10);
+                                item.price = parseFloat(item.price);
+
+                                cartTotal += item.price * item.quantity;
+                            });
+
+                            cartTotaElement.textContent = `${cartTotal.toFixed(2)}$`;
+                        });
+                    });
+            }
         }
     }
 }

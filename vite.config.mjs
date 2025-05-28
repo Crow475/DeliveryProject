@@ -12,6 +12,10 @@ export default defineConfig({
             input: {
                 main: "src/index.html",
                 navbar: "src/components/navbar/navbar.html",
+                cart_dialog: "src/components/cart-dialog/cart-dialog.html",
+                cartItem: "src/components/cart-item/cart-item.html",
+                cartRestaurant:
+                    "src/components/cart-restaurant/cart-restaurant.html",
                 categoryCard: "src/components/category-card/category-card.html",
                 restaurantCard:
                     "src/components/restaurant-card/restaurant-card.html",

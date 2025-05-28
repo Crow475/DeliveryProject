@@ -96,6 +96,7 @@
         />
     </div>
 </div>
+<div id="dialog-placeholder"></div>
 <nav id="navbar">
     <ul
         class="mx-3 hidden flex-row items-center justify-start space-x-3 text-xl md:flex"
@@ -129,7 +130,8 @@
     </button>
     <div class="flex flex-row space-x-2">
         <button
-            class="flex h-8 flex-row items-center space-x-2 rounded-4xl bg-orange-600 px-3 py-2 text-white"
+            class="flex h-8 cursor-pointer flex-row items-center space-x-2 rounded-4xl bg-orange-600 px-3 py-2 text-white"
+            id="cartButton"
         >
             <img
                 src="/icons/shopping-cart.svg"
@@ -138,6 +140,10 @@
                 class="invert select-none"
             />
             <span class="text-sm font-bold">Cart</span>
+            <div
+                class="hidden h-2 w-2 rounded-full bg-white"
+                id="cartNotification"
+            ></div>
         </button>
         <button
             class="hidden cursor-pointer rounded-4xl bg-gray-500 p-2 md:block"

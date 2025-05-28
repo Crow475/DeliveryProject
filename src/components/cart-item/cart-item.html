@@ -1,0 +1,41 @@
+<link href="/styles.css" rel="stylesheet" />
+<li class="flex w-full flex-row items-center justify-between" id="cartItemRoot">
+    <div class="flex flex-row items-center justify-start space-x-2">
+        <img
+            src="%VITE_IMAGE_PATH%/WD-i1.avif"
+            class="h-10 w-10 rounded-lg object-cover"
+            id="cartItemImage"
+        />
+        <span class="text-lg" id="cartItemName">Cheeseburger</span>
+    </div>
+    <div class="flex flex-row items-center justify-end space-x-2">
+        <span class="text-lg" id="cartItemPrice">$5.99</span>
+        <span class="text-base text-neutral-500" id="cartItemQuantity">x1</span>
+        <div
+            class="flex flex-col items-center justify-center divide-y divide-white dark:divide-black"
+        >
+            <button
+                class="flex h-4 w-4 cursor-pointer items-center justify-center rounded-t-sm bg-gray-500 text-sm text-white hover:bg-gray-600 active:bg-gray-700"
+                id="cartItemIncreaseButton"
+            >
+                <img
+                    src="/icons/plus.svg"
+                    width="12"
+                    height="12"
+                    class="invert select-none"
+                />
+            </button>
+            <button
+                class="flex h-4 w-4 cursor-pointer items-center justify-center rounded-b-sm bg-gray-500 text-sm text-white hover:bg-gray-600 active:bg-gray-700"
+                id="cartItemDecreaseButton"
+            >
+                <img
+                    src="/icons/minus.svg"
+                    width="12"
+                    height="12"
+                    class="invert select-none"
+                />
+            </button>
+        </div>
+    </div>
+</li>
