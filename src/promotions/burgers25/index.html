@@ -12,35 +12,40 @@
     </head>
     <body>
         <navbar-element></navbar-element>
-        <div class="container p-1">
+        <div class="p-1">
             <div
-                class="flex w-full flex-row items-center justify-start px-8 py-4"
+                class="flex w-full flex-row items-center justify-center px-8 py-4 md:justify-start"
             >
                 <img
                     src="%VITE_IMAGE_PATH%burgersandfries.jpg"
-                    class="h-100 w-2/3 rounded-xl object-cover"
+                    class="h-50 w-11/12 rounded-xl object-cover md:h-100 md:w-2/3"
                 />
             </div>
             <main>
                 <div
-                    class="relative flex flex-col items-start justify-start space-y-6 px-8 py-4"
+                    class="relative flex flex-col items-start justify-start space-y-6 px-4 py-4 md:px-8"
                 >
-                    <h1 class="font-display text-4xl font-black">
+                    <h1 class="font-display text-2xl font-black md:text-4xl">
                         Discount in all fast food restaurants.
                     </h1>
+
                     <div
-                        class="mx-4 flex w-5/12 flex-row items-center space-x-2 rounded-2xl bg-neutral-100 p-4 shadow-md transition-all duration-200 dark:bg-neutral-800"
+                        class="mx-0 flex w-full flex-col items-start space-y-3 space-x-0 rounded-2xl bg-neutral-100 p-4 shadow-md transition-all duration-200 md:mx-4 md:w-5/12 md:flex-row md:items-center md:space-y-0 md:space-x-2 dark:bg-neutral-800"
                     >
-                        <span
-                            class="w-min rounded-3xl bg-orange-600 px-4 py-1 text-xl font-bold text-nowrap text-white select-none"
-                        >
-                            25% off
-                        </span>
-                        <span class="text-xl">
-                            In all fast food restaurants
-                        </span>
                         <div
-                            class="transi flex w-min flex-row items-center justify-start rounded-4xl bg-neutral-200 p-1 text-center duration-200 dark:bg-neutral-700"
+                            class="flex flex-row items-center justify-center space-x-2"
+                        >
+                            <span
+                                class="w-min rounded-3xl bg-orange-600 px-3 py-0.5 text-lg font-bold text-nowrap text-white select-none md:px-4 md:py-1 md:text-xl"
+                            >
+                                25% off
+                            </span>
+                            <span class="text-base md:text-xl">
+                                In all fast food restaurants
+                            </span>
+                        </div>
+                        <div
+                            class="flex w-min flex-row items-center justify-start rounded-4xl bg-neutral-200 p-1 text-center transition-all duration-200 dark:bg-neutral-700"
                         >
                             <input
                                 type="text"
@@ -63,16 +68,16 @@
                             </button>
                         </div>
                     </div>
-                    <p class="text-lg">
+                    <p class="text-base md:text-lg">
                         Together with our partners, we are happy to offer you a
                         25% discount on all fast food restaurants.
                     </p>
-                    <p class="text-lg">
+                    <p class="text-base md:text-lg">
                         This discount is valid for all fast food restaurants in
                         our catalog. The offer applies to all items in the menu,
                         including burgers, fries, and drinks.
                     </p>
-                    <p class="text-lg">
+                    <p class="text-base md:text-lg">
                         Use the code <strong>BURGERS25</strong> to take
                         advantage of this offer. To redeem your discount, simply
                         enter the code at checkout. You can get the code using
@@ -80,21 +85,21 @@
                         try our delicious food at a great price! The discount
                         will be applied to your total order amount.
                     </p>
-                    <p class="text-lg">
+                    <p class="text-base md:text-lg">
                         The offer is valid for all users and can be used once
                         per order and per accout. The discount is not valid in
                         conjunction with other offers or promotions. The offer
                         is valid until 31.12.2025.
                     </p>
-                    <p class="text-lg">
+                    <p class="text-base md:text-lg">
                         If you have any questions or need assistance, feel free
                         to reach out to our customer support team. We're here to
                         help! You can find our contact information on the
-                        <a href="/about" class="text-orange-600 underline"
+                        <a href="/about/" class="text-orange-600 underline"
                             >About page</a
                         >.
                     </p>
-                    <p class="text-lg">
+                    <p class="text-base md:text-lg">
                         Thank you for choosing FoodRocket! We look forward to
                         serving you delicious meals and providing you with an
                         exceptional dining experience. Enjoy your meal!
