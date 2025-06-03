@@ -39,6 +39,7 @@ class Navbar extends HTMLElement {
         const cartItemList = shadowRoot.getElementById("cartItemsList");
         const clearCartButton = shadowRoot.getElementById("clearCartButton");
         const cartTotaElement = shadowRoot.getElementById("cartTotal");
+        const cartCheckoutButton = shadowRoot.getElementById("checkoutButton");
 
         let cartData = JSON.parse(
             localStorage.getItem("cart") || '{"cart": []}',
@@ -115,7 +116,7 @@ class Navbar extends HTMLElement {
         clearCartButton.addEventListener("click", function (event) {
             cartData.cart = [];
             localStorage.setItem("cart", JSON.stringify(cartData));
-            updateCart();
+            window.dispatchEvent(new Event("cart-updated"));
         });
 
         window.addEventListener("cart-updated", function (event) {
@@ -268,6 +269,18 @@ class Navbar extends HTMLElement {
                 });
             });
 
+            waitForElement("checkout-restaurant-element").then(() => {
+                const cores = document.querySelectorAll(
+                    "checkout-restaurant-element",
+                );
+                // console.log("checkout-restaurant-element loaded");
+                cores.forEach((core) => {
+                    core.shadowRoot
+                        .getElementById("core")
+                        .classList.add("dark");
+                });
+            });
+
             waitForElement("food-item-element").then(() => {
                 const fitems = document.querySelectorAll("food-item-element");
                 // console.log("food-item-element loaded");
@@ -315,6 +328,18 @@ class Navbar extends HTMLElement {
                 });
             });
 
+            waitForElement("checkout-restaurant-element").then(() => {
+                const cores = document.querySelectorAll(
+                    "checkout-restaurant-element",
+                );
+                // console.log("checkout-restaurant-element loaded");
+                cores.forEach((core) => {
+                    core.shadowRoot
+                        .getElementById("core")
+                        .classList.remove("dark");
+                });
+            });
+
             waitForElement("food-item-element").then(() => {
                 const fitems = document.querySelectorAll("food-item-element");
                 // console.log("food-item-element loaded");
@@ -341,6 +366,7 @@ class Navbar extends HTMLElement {
                 `;
 
                 cartNotification.classList.add("hidden");
+                cartCheckoutButton.setAttribute("aria-disabled", "true");
 
                 cartTotaElement.textContent = "0.00$";
             } else {
@@ -384,6 +410,11 @@ class Navbar extends HTMLElement {
 
                                 cartTotal += item.price * item.quantity;
                             });
+
+                            cartCheckoutButton.setAttribute(
+                                "Aria-disabled",
+                                "false",
+                            );
 
                             cartTotaElement.textContent = `${cartTotal.toFixed(2)}$`;
                         });

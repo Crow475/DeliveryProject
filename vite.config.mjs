@@ -16,6 +16,11 @@ export default defineConfig({
                 cartItem: "src/components/cart-item/cart-item.html",
                 cartRestaurant:
                     "src/components/cart-restaurant/cart-restaurant.html",
+                checkoutRestaurant:
+                    "src/components/checkout-restaurant/checkout-restaurant.html",
+                checkoutItem: "src/components/checkout-item/checkout-item.html",
+                checkoutDelivery:
+                    "src/components/checkout-delivery/checkout-delivery.html",
                 categoryCard: "src/components/category-card/category-card.html",
                 restaurantCard:
                     "src/components/restaurant-card/restaurant-card.html",
@@ -26,6 +31,7 @@ export default defineConfig({
                 restaurant: "src/restaurant/index.html",
                 promotions_welcome: "src/promotions/welcome/index.html",
                 promotions_burgers25: "src/promotions/burgers25/index.html",
+                checkout: "src/checkout/index.html",
             },
         },
     },
