@@ -76,7 +76,7 @@ fetch("/data/restaurants.json")
                     `${import.meta.env.VITE_IMAGE_PATH}${restaurant.image}`,
                 );
                 card.setAttribute("rating", restaurant.rating);
-                card.setAttribute("price", restaurant.price);
+                card.setAttribute("delivery-price", restaurant.deliveryPrice);
                 card.setAttribute("link", restaurant.link);
                 container.appendChild(card);
             });

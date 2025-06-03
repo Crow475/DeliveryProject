@@ -34,10 +34,10 @@ function updateCart() {
 
     if (cartData.cart.length === 0) {
         checkoutRestaurantListElement.innerHTML = `
-            <div class="flex flex-col items-center justify-center w-full space-y-2 my-40">
-                <h2 class="font-display text-4xl font-black">Oops! It looks like your cart is empty.</h2>
-                <p class="text-lg">Start adding items to your cart to proceed with checkout.</p>
-                <a href="/catalog/" class="text-lg text-orange-600 underline">View all restaurants</a>
+            <div class="flex flex-col items-center justify-center w-full space-y-2 my-20 md:my-40 text-center">
+                <h2 class="font-display text-xl md:text-4xl font-black">Oops! It looks like your cart is empty.</h2>
+                <p class="text-sm md:text-lg">Start adding items to your cart to proceed with checkout.</p>
+                <a href="/catalog/" class="text-sm md:text-lg text-orange-600 underline">View all restaurants</a>
             </div>
         `;
         checkoutDeliveryList.innerHTML = "";

@@ -1,6 +1,6 @@
 <dialog
     id="cartDropdown"
-    class="fixed top-16 left-[5vw] z-[80] w-[90vw] flex-col items-start rounded-xl bg-neutral-100 p-4 text-lg shadow-lg transition-all duration-200 backdrop:bg-transparent backdrop:backdrop-blur-xs open:flex md:left-[33vw] md:w-[33vw] dark:bg-neutral-800 dark:text-white"
+    class="fixed top-16 left-[5vw] z-[80] w-[90vw] flex-col items-start rounded-xl bg-neutral-100 p-2 text-lg shadow-lg transition-all duration-200 backdrop:bg-transparent backdrop:backdrop-blur-xs open:flex md:left-[33vw] md:w-[33vw] md:p-4 dark:bg-neutral-800 dark:text-white"
 >
     <div class="flex w-full flex-row items-center justify-end">
         <button id="cartCloseButton" class="cursor-pointer">
@@ -13,9 +13,13 @@
         </button>
     </div>
     <div class="flex w-full flex-col items-start justify-start space-y-3">
-        <h3 class="font-display mb-2 px-3 text-2xl font-black">Cart</h3>
+        <h3
+            class="font-display mb-2 px-2 text-xl font-black md:px-3 md:text-2xl"
+        >
+            Cart
+        </h3>
         <ul
-            class="flex h-[60vh] w-full flex-col items-start justify-start space-y-4 overflow-y-scroll overscroll-contain px-4 *:w-full md:h-100"
+            class="flex h-[60vh] w-full flex-col items-start justify-start space-y-4 overflow-y-scroll overscroll-contain px-2 *:w-full md:h-100 md:px-4"
             id="cartItemsList"
         ></ul>
         <hr class="w-full border-dashed border-neutral-500" />

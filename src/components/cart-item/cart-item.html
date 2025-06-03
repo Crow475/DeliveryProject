@@ -1,21 +1,28 @@
 <link href="/styles.css" rel="stylesheet" />
 <li class="flex w-full flex-row items-center justify-between" id="cartItemRoot">
-    <div class="flex flex-row items-center justify-start space-x-2">
+    <div
+        class="flex flex-row items-center justify-start space-x-1 md:space-x-2"
+    >
         <img
             src="%VITE_IMAGE_PATH%/WD-i1.avif"
-            class="h-10 w-10 rounded-lg object-cover"
+            class="h-8 w-8 rounded-lg object-cover md:h-10 md:w-10"
             id="cartItemImage"
         />
-        <span class="text-lg" id="cartItemName">Cheeseburger</span>
+        <span class="text-sm md:text-lg" id="cartItemName">Cheeseburger</span>
     </div>
     <div class="flex flex-row items-center justify-end space-x-2">
-        <span class="text-lg" id="cartItemPrice">$5.99</span>
-        <span class="text-base text-neutral-500" id="cartItemQuantity">x1</span>
+        <span class="text-sm md:text-lg" id="cartItemPrice">$5.99</span>
+        <span
+            class="text-xs text-neutral-500 md:text-base"
+            id="cartItemQuantity"
+        >
+            x1
+        </span>
         <div
-            class="flex flex-col items-center justify-center divide-y divide-white dark:divide-black"
+            class="flex flex-row-reverse items-center justify-center space-x-1 space-x-reverse divide-white md:flex-col md:space-x-0 md:divide-y dark:divide-black"
         >
             <button
-                class="flex h-4 w-4 cursor-pointer items-center justify-center rounded-t-sm bg-gray-500 text-sm text-white hover:bg-gray-600 active:bg-gray-700"
+                class="flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-gray-500 text-sm text-white hover:bg-gray-600 active:bg-gray-700 md:h-4 md:w-4 md:rounded-none md:rounded-t-sm"
                 id="cartItemIncreaseButton"
             >
                 <img
@@ -26,7 +33,7 @@
                 />
             </button>
             <button
-                class="flex h-4 w-4 cursor-pointer items-center justify-center rounded-b-sm bg-gray-500 text-sm text-white hover:bg-gray-600 active:bg-gray-700"
+                class="flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-gray-500 text-sm text-white hover:bg-gray-600 active:bg-gray-700 md:h-4 md:w-4 md:rounded-none md:rounded-b-sm"
                 id="cartItemDecreaseButton"
             >
                 <img
