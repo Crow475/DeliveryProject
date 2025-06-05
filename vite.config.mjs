@@ -21,6 +21,8 @@ export default defineConfig({
                 checkoutItem: "src/components/checkout-item/checkout-item.html",
                 checkoutDelivery:
                     "src/components/checkout-delivery/checkout-delivery.html",
+                checkoutDiscount:
+                    "src/components/checkout-discount/checkout-discount.html",
                 categoryCard: "src/components/category-card/category-card.html",
                 restaurantCard:
                     "src/components/restaurant-card/restaurant-card.html",

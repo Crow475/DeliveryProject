@@ -859,6 +859,35 @@
                     "restaurantId": 12
                 }
             ]
+        },
+        {
+            "restaurantId": 13,
+            "items": [
+                {
+                    "id": 101,
+                    "name": "Rye Bread",
+                    "description": "Freshly baked rye bread, perfect for sandwiches or to enjoy with butter.",
+                    "image": "BMD-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 13
+                },
+                {
+                    "id": 102,
+                    "name": "Croissant",
+                    "description": "A flaky and buttery croissant, perfect for breakfast or a snack.",
+                    "image": "BMD-i2.avif",
+                    "price": "1.99",
+                    "restaurantId": 13
+                },
+                {
+                    "id": 103,
+                    "name": "Pumpkin seed wholemeal bread",
+                    "description": "A wholesome pumpkin seed wholemeal bread, great for sandwiches or toast.",
+                    "image": "BMD-i3.avif",
+                    "price": "2.99",
+                    "restaurantId": 13
+                }
+            ]
         }
     ]
 }

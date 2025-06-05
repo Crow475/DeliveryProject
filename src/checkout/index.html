@@ -13,6 +13,11 @@
             defer
         ></script>
         <script
+            src="/components/checkout-discount/checkout-discount.js"
+            type="module"
+            defer
+        ></script>
+        <script
             src="/components/checkout-delivery/checkout-delivery.js"
             type="module"
             defer
@@ -101,6 +106,10 @@
                                 >
                                     Discounts
                                 </h3>
+                                <ul
+                                    class="flex w-full flex-col items-start justify-start space-y-2 px-4 *:w-full md:px-10"
+                                    id="checkoutDiscountList"
+                                ></ul>
                             </div>
                         </div>
                         <div
@@ -111,11 +120,13 @@
                             </h3>
                             <form
                                 class="flex flex-row items-center justify-center space-x-2"
+                                id="discountForm"
                             >
                                 <input
                                     type="text"
                                     placeholder="Enter code"
-                                    class="w-2/3 rounded-full border border-neutral-500 bg-white px-4 py-2 text-base transition-colors duration-200 focus:ring-2 focus:ring-orange-500 focus:outline-none dark:border-neutral-600 dark:bg-neutral-700 dark:text-white dark:focus:ring-orange-500"
+                                    id="discountCodeInput"
+                                    class="w-2/3 rounded-full border border-neutral-500 bg-white px-4 py-2 text-base transition-colors duration-200 focus:ring-2 focus:ring-orange-500 focus:outline-none disabled:text-neutral-500 dark:border-neutral-600 dark:bg-neutral-700 dark:text-white dark:focus:ring-orange-500"
                                 />
                                 <input
                                     type="submit"
@@ -123,6 +134,13 @@
                                     class="w-1/3 cursor-pointer rounded-full bg-orange-600 px-3 py-2 font-bold text-white ring-orange-600 ring-offset-1 select-none hover:bg-orange-700 focus:outline-none active:ring-1"
                                 />
                             </form>
+                            <span
+                                class="hidden text-center text-xs text-red-500"
+                                id="discountErrorMessage"
+                            >
+                                Error: the code you entered is incorrect or
+                                expired
+                            </span>
                         </div>
                     </div>
                     <hr class="w-full border-solid border-neutral-500" />
@@ -144,11 +162,13 @@
                     >
                         <button
                             class="w-full cursor-pointer rounded-full bg-orange-600 px-6 py-3 text-xl font-bold text-white ring-orange-600 ring-offset-1 select-none hover:bg-orange-700 focus:outline-none active:ring-1"
+                            id="confirmOrderButton"
                         >
                             Confirm order
                         </button>
                         <button
                             class="w-full cursor-pointer rounded-full bg-gray-500 px-6 py-3 text-xl font-bold text-white ring-gray-500 ring-offset-1 hover:bg-gray-600 active:ring-1"
+                            id="cancelOrderButton"
                         >
                             Cancel order
                         </button>

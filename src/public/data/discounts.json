@@ -1,0 +1,14 @@
+{
+    "discounts": [
+        {
+            "code": "BURGERS25",
+            "name": "25% off in fast food restaurants",
+            "percentage": 25
+        },
+        {
+            "code": "WELCOME50",
+            "name": "50% off on your first order",
+            "percentage": 50
+        }
+    ]
+}

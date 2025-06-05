@@ -119,6 +119,16 @@
             "deliveryPrice": "0.00",
             "rating": "9.6",
             "link": "/restaurant/#id=12"
+        },
+        {
+            "id": 13,
+            "categoryId": 5,
+            "name": "Bake My Day",
+            "description": "Freshly baked goods and pastries",
+            "image": "BMD-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.8",
+            "link": "/restaurant/#id=13"
         }
     ]
 }
