@@ -129,6 +129,56 @@
             "deliveryPrice": "0.00",
             "rating": "8.8",
             "link": "/restaurant/#id=13"
+        },
+        {
+            "id": 14,
+            "categoryId": 5,
+            "name": "Pastry Palace",
+            "description": "Delicious pastries and desserts",
+            "image": "PP-Logo.webp",
+            "deliveryPrice": "0.99",
+            "rating": "8.5",
+            "link": "/restaurant/#id=14"
+        },
+        {
+            "id": 15,
+            "categoryId": 5,
+            "name": "Baker's Dozen",
+            "description": "A variety of baked goods",
+            "image": "BD-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.2",
+            "link": "/restaurant/#id=15"
+        },
+        {
+            "id": 16,
+            "categoryId": 5,
+            "name": "Croissant Craft",
+            "description": "Premium croissants and pastries",
+            "image": "TCCC-Logo.webp",
+            "deliveryPrice": "2.99",
+            "rating": "9.1",
+            "link": "/restaurant/#id=16"
+        },
+        {
+            "id": 17,
+            "categoryId": 5,
+            "name": "Artisan's Table",
+            "description": "Artisan baked goods and breads",
+            "image": "TAT-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.7",
+            "link": "/restaurant/#id=17"
+        },
+        {
+            "id": 18,
+            "categoryId": 5,
+            "name": "Cozy Crumb",
+            "description": "Cozy bakery with a variety of treats",
+            "image": "CC-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.4",
+            "link": "/restaurant/#id=18"
         }
     ]
 }

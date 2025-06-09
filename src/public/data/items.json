@@ -886,6 +886,231 @@
                     "image": "BMD-i3.avif",
                     "price": "2.99",
                     "restaurantId": 13
+                },
+                {
+                    "id": 104,
+                    "name": "Classic baguette",
+                    "description": "A traditional French baguette, crusty on the outside and soft on the inside.",
+                    "image": "BMD-i5.avif",
+                    "price": "1.49",
+                    "restaurantId": 13
+                },
+                {
+                    "id": 105,
+                    "name": "Eclair",
+                    "description": "A delicious eclair filled with cream and topped with chocolate icing.",
+                    "image": "BMD-i4.avif",
+                    "price": "1.49",
+                    "restaurantId": 13
+                }
+            ]
+        },
+        {
+            "restaurantId": 14,
+            "items": [
+                {
+                    "id": 106,
+                    "name": "Plain Croissant",
+                    "description": "A classic buttery croissant, perfect for breakfast or a snack.",
+                    "image": "PP-i1.avif",
+                    "price": "1.99",
+                    "restaurantId": 14
+                },
+                {
+                    "id": 107,
+                    "name": "Chocolate Croissant",
+                    "description": "A delicious chocolate-filled croissant, perfect for a sweet treat.",
+                    "image": "PP-i2.avif",
+                    "price": "2.49",
+                    "restaurantId": 14
+                },
+                {
+                    "id": 108,
+                    "name": "Vanilla Cream Croissant",
+                    "description": "A delightful croissant filled with vanilla cream, perfect for a sweet snack.",
+                    "image": "PP-i3.avif",
+                    "price": "2.49",
+                    "restaurantId": 14
+                },
+                {
+                    "id": 109,
+                    "name": "Rye Bread",
+                    "description": "Freshly baked rye bread, perfect for sandwiches or to enjoy with butter.",
+                    "image": "PP-i4.avif",
+                    "price": "2.49",
+                    "restaurantId": 14
+                }
+            ]
+        },
+        {
+            "restaurantId": 15,
+            "items": [
+                {
+                    "id": 110,
+                    "name": "Whole grain bread",
+                    "description": "A healthy whole grain bread, perfect for sandwiches or toast.",
+                    "image": "BD-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 15
+                },
+                {
+                    "id": 111,
+                    "name": "Rye Bread",
+                    "description": "Freshly baked rye bread, perfect for sandwiches or to enjoy with butter.",
+                    "image": "BMD-i1.avif",
+                    "price": "3.49",
+                    "restaurantId": 15
+                },
+                {
+                    "id": 112,
+                    "name": "Ham and cheese croissant",
+                    "description": "A savory croissant filled with ham and cheese, perfect for a quick snack.",
+                    "image": "BD-i2.avif",
+                    "price": "2.99",
+                    "restaurantId": 15
+                },
+                {
+                    "id": 113,
+                    "name": "Salmon croissant",
+                    "description": "A delicious croissant filled with smoked salmon and cream cheese, perfect for a light meal.",
+                    "image": "BD-i3.avif",
+                    "price": "3.49",
+                    "restaurantId": 15
+                },
+                {
+                    "id": 114,
+                    "name": "Sliced white bread",
+                    "description": "A classic sliced white bread, perfect for sandwiches or toast.",
+                    "image": "BD-i4.avif",
+                    "price": "2.49",
+                    "restaurantId": 15
+                }
+            ]
+        },
+        {
+            "restaurantId": 16,
+            "items": [
+                {
+                    "id": 115,
+                    "name": "Classic butter croissant",
+                    "description": "A classic buttery croissant, perfect for breakfast or a snack.",
+                    "image": "TCCC-i1.avif",
+                    "price": "3.99",
+                    "restaurantId": 16
+                },
+                {
+                    "id": 116,
+                    "name": "Pistachio croissant",
+                    "description": "A delightful croissant filled with pistachio cream, perfect for a sweet treat.",
+                    "image": "TCCC-i2.avif",
+                    "price": "4.49",
+                    "restaurantId": 16
+                },
+                {
+                    "id": 117,
+                    "name": "Almond croissant",
+                    "description": "A delicious almond-filled croissant, perfect for a sweet snack.",
+                    "image": "TCCC-i3.avif",
+                    "price": "4.49",
+                    "restaurantId": 16
+                },
+                {
+                    "id": 118,
+                    "name": "Ham and cheese croissant",
+                    "description": "A savory croissant filled with ham and cheese, perfect for a quick snack.",
+                    "image": "BD-i2.avif",
+                    "price": "5.99",
+                    "restaurantId": 16
+                },
+                {
+                    "id": 119,
+                    "name": "Salmon croissant",
+                    "description": "A delicious croissant filled with smoked salmon and cream cheese, perfect for a light meal.",
+                    "image": "BD-i3.avif",
+                    "price": "6.49",
+                    "restaurantId": 16
+                }
+            ]
+        },
+        {
+            "restaurantId": 17,
+            "items": [
+                {
+                    "id": 120,
+                    "name": "Rye Bread with Seeds",
+                    "description": "A hearty rye bread with a mix of seeds, perfect for sandwiches or toast.",
+                    "image": "TAT-i1.avif",
+                    "price": "3.49",
+                    "restaurantId": 17
+                },
+                {
+                    "id": 121,
+                    "name": "Gray grain baguette",
+                    "description": "A rustic gray grain baguette, crusty on the outside and soft on the inside.",
+                    "image": "TAT-i2.avif",
+                    "price": "2.99",
+                    "restaurantId": 17
+                },
+                {
+                    "id": 122,
+                    "name": "Whole grain bread",
+                    "description": "A healthy whole grain bread, perfect for sandwiches or toast.",
+                    "image": "BD-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 17
+                },
+                {
+                    "id": 123,
+                    "name": "Seasame sticks",
+                    "description": "Crunchy sesame sticks, perfect for snacking or as a side with meals.",
+                    "image": "TAT-i3.avif",
+                    "price": "1.99",
+                    "restaurantId": 17
+                }
+            ]
+        },
+        {
+            "restaurantId": 18,
+            "items": [
+                {
+                    "id": 124,
+                    "name": "Butter croissant",
+                    "description": "A classic buttery croissant, perfect for breakfast or a snack.",
+                    "image": "CC-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 18
+                },
+                {
+                    "id": 125,
+                    "name": "Strawberry croissant",
+                    "description": "A delightful croissant filled with strawberry jam, perfect for a sweet treat.",
+                    "image": "CC-i2.avif",
+                    "price": "2.99",
+                    "restaurantId": 18
+                },
+                {
+                    "id": 126,
+                    "name": "Chocolate caramel croissant",
+                    "description": "A delicious croissant filled with chocolate and caramel, perfect for a sweet snack.",
+                    "image": "CC-i3.avif",
+                    "price": "3.49",
+                    "restaurantId": 18
+                },
+                {
+                    "id": 127,
+                    "name": "Pistachio croissant",
+                    "description": "A delightful croissant filled with pistachio cream, perfect for a sweet treat.",
+                    "image": "CC-i4.avif",
+                    "price": "3.99",
+                    "restaurantId": 18
+                },
+                {
+                    "id": 128,
+                    "name": "Whole grain bread",
+                    "description": "A healthy whole grain bread, perfect for sandwiches or toast.",
+                    "image": "BD-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 18
                 }
             ]
         }
