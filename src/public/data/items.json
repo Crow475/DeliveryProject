@@ -1113,6 +1113,912 @@
                     "restaurantId": 18
                 }
             ]
+        },
+        {
+            "restaurantId": 19,
+            "items": [
+                {
+                    "id": 129,
+                    "name": "Scrambled Eggs",
+                    "description": "Fluffy scrambled eggs served with a side of fresh vegetables.",
+                    "image": "SSU-i1.avif",
+                    "price": "3.99",
+                    "restaurantId": 19
+                },
+                {
+                    "id": 130,
+                    "name": "Classic shakshuka",
+                    "description": "A traditional Middle Eastern dish of poached eggs in a spicy tomato sauce, served with bread.",
+                    "image": "SSU-i2.avif",
+                    "price": "4.99",
+                    "restaurantId": 19
+                },
+                {
+                    "id": 131,
+                    "name": "Banana Pancakes",
+                    "description": "Fluffy pancakes made with ripe bananas, served with maple syrup.",
+                    "image": "SSU-i3.avif",
+                    "price": "5.49",
+                    "restaurantId": 19
+                },
+                {
+                    "id": 132,
+                    "name": "Egg and Cheese Croissant",
+                    "description": "A buttery croissant filled with scrambled eggs and melted cheese.",
+                    "image": "SSU-i4.avif",
+                    "price": "3.49",
+                    "restaurantId": 19
+                },
+                {
+                    "id": 133,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 19
+                },
+                {
+                    "id": 134,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 19
+                }
+            ]
+        },
+        {
+            "restaurantId": 20,
+            "items": [
+                {
+                    "id": 135,
+                    "name": "Pancakes with Berries",
+                    "description": "Fluffy cottage cheese pancakes served with fresh berries and syrup.",
+                    "image": "BS-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 20
+                },
+                {
+                    "id": 136,
+                    "name": "Turkey sandwich",
+                    "description": "A hearty turkey sandwich with lettuce, tomatoes, and mayo on whole grain bread.",
+                    "image": "BS-i2.avif",
+                    "price": "6.49",
+                    "restaurantId": 20
+                },
+                {
+                    "id": 137,
+                    "name": "Croque Monsieur",
+                    "description": "A classic French sandwich with ham and cheese, grilled to perfection.",
+                    "image": "BS-i3.avif",
+                    "price": "7.49",
+                    "restaurantId": 20
+                },
+                {
+                    "id": 138,
+                    "name": "French Toast",
+                    "description": "Thick slices of bread dipped in egg and milk served with berries and syrup.",
+                    "image": "BS-i4.avif",
+                    "price": "5.49",
+                    "restaurantId": 20
+                },
+                {
+                    "id": 139,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 20
+                },
+                {
+                    "id": 140,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 20
+                }
+            ]
+        },
+        {
+            "restaurantId": 21,
+            "items": [
+                {
+                    "id": 141,
+                    "name": "Chicken sandwich",
+                    "description": "A crispy chicken sandwich with lettuce, tomatoes, and mayo on a toasted bun.",
+                    "image": "DG-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 21
+                },
+                {
+                    "id": 142,
+                    "name": "Scrambled Eggs",
+                    "description": "Fluffy scrambled eggs served with a side of fresh vegetables.",
+                    "image": "SSU-i1.avif",
+                    "price": "3.99",
+                    "restaurantId": 21
+                },
+                {
+                    "id": 143,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 21
+                },
+                {
+                    "id": 144,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 21
+                },
+                {
+                    "id": 145,
+                    "name": "Cold cappuccino",
+                    "description": "A refreshing cold cappuccino made with espresso and chilled milk.",
+                    "image": "coffee-i3.avif",
+                    "price": "3.99",
+                    "restaurantId": 21
+                },
+                {
+                    "id": 146,
+                    "name": "Aeropress coffee",
+                    "description": "A smooth and rich coffee made using the Aeropress method.",
+                    "image": "coffee-i4.avif",
+                    "price": "2.99",
+                    "restaurantId": 21
+                }
+            ]
+        },
+        {
+            "restaurantId": 22,
+            "items": [
+                {
+                    "id": 147,
+                    "name": "Chocolate and berrie waffles",
+                    "description": "Delicious waffles topped with chocolate sauce and fresh berries.",
+                    "image": "BB-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 22
+                },
+                {
+                    "id": 148,
+                    "name": "Breakfast croissant",
+                    "description": "A buttery croissant filled with scrambled eggs, cheese, and ham.",
+                    "image": "BB-i2.avif",
+                    "price": "3.99",
+                    "restaurantId": 22
+                },
+                {
+                    "id": 149,
+                    "name": "Egg benedict",
+                    "description": "A classic breakfast dish with poached eggs, ham, and hollandaise sauce on a toast.",
+                    "image": "BB-i3.avif",
+                    "price": "5.49",
+                    "restaurantId": 22
+                },
+                {
+                    "id": 150,
+                    "name": "Classic shakshuka",
+                    "description": "A traditional Middle Eastern dish of poached eggs in a spicy tomato sauce, served with bread.",
+                    "image": "SSU-i2.avif",
+                    "price": "4.99",
+                    "restaurantId": 22
+                },
+                {
+                    "id": 151,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 22
+                },
+                {
+                    "id": 152,
+                    "name": "Cold cappuccino",
+                    "description": "A refreshing cold cappuccino made with espresso and chilled milk.",
+                    "image": "coffee-i3.avif",
+                    "price": "3.99",
+                    "restaurantId": 22
+                }
+            ]
+        },
+        {
+            "restaurantId": 23,
+            "items": [
+                {
+                    "id": 153,
+                    "name": "Ceasar Sandwich",
+                    "description": "A gourmet sandwich with grilled chicken, romaine lettuce, parmesan cheese, and Caesar dressing on a toasted baguette.",
+                    "image": "CaCo-i1.avif",
+                    "price": "6.99",
+                    "restaurantId": 23
+                },
+                {
+                    "id": 154,
+                    "name": "Salami sandwich",
+                    "description": "A delicious sandwich with salami, cheese, lettuce, and tomatoes on a fresh baguette.",
+                    "image": "CaCo-i2.avif",
+                    "price": "5.99",
+                    "restaurantId": 23
+                },
+                {
+                    "id": 155,
+                    "name": "Scrambled Eggs",
+                    "description": "Fluffy scrambled eggs served with a side of fresh vegetables.",
+                    "image": "SSU-i1.avif",
+                    "price": "3.99",
+                    "restaurantId": 23
+                },
+                {
+                    "id": 156,
+                    "name": "Banana Pancakes",
+                    "description": "Fluffy pancakes made with ripe bananas, served with maple syrup.",
+                    "image": "SSU-i3.avif",
+                    "price": "5.49",
+                    "restaurantId": 23
+                },
+                {
+                    "id": 157,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 23
+                },
+                {
+                    "id": 158,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 23
+                }
+            ]
+        },
+        {
+            "restaurantId": 24,
+            "items": [
+                {
+                    "id": 159,
+                    "name": "Eggplant sandwich",
+                    "description": "A delicious sandwich with grilled eggplant, cheese, lettuce, and tomatoes on a fresh baguette.",
+                    "image": "CoCo-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 24
+                },
+                {
+                    "id": 160,
+                    "name": "Ham and chesee sandwich",
+                    "description": "A classic sandwich with ham, cheese, lettuce, and tomatoes on a fresh baguette.",
+                    "image": "CoCo-i2.avif",
+                    "price": "5.49",
+                    "restaurantId": 24
+                },
+                {
+                    "id": 161,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 24
+                },
+                {
+                    "id": 162,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 24
+                },
+                {
+                    "id": 163,
+                    "name": "Cold cappuccino",
+                    "description": "A refreshing cold cappuccino made with espresso and chilled milk.",
+                    "image": "coffee-i3.avif",
+                    "price": "3.99",
+                    "restaurantId": 24
+                }
+            ]
+        },
+        {
+            "restaurantId": 25,
+            "items": [
+                {
+                    "id": 164,
+                    "name": "Waffle with Berries",
+                    "description": "A delicious waffle topped with fresh berries and whipped cream.",
+                    "image": "BB-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 25
+                },
+                {
+                    "id": 165,
+                    "name": "Waffle with Ice Cream",
+                    "description": "A warm waffle served with a scoop of vanilla ice cream and chocolate sauce.",
+                    "image": "WR-i1.avif",
+                    "price": "5.49",
+                    "restaurantId": 25
+                },
+                {
+                    "id": 166,
+                    "name": "Cheese waffle with bacon",
+                    "description": "A savory waffle topped with melted cheese and crispy bacon.",
+                    "image": "WR-i2.avif",
+                    "price": "6.49",
+                    "restaurantId": 25
+                },
+                {
+                    "id": 167,
+                    "name": "Waffle with Banana",
+                    "description": "A delicious waffle topped with sliced bananas and a drizzle of honey.",
+                    "image": "WR-i3.avif",
+                    "price": "4.99",
+                    "restaurantId": 25
+                },
+                {
+                    "id": 168,
+                    "name": "Potato waffle with egg and bacon",
+                    "description": "A hearty potato waffle topped with a fried egg and crispy bacon.",
+                    "image": "WR-i4.avif",
+                    "price": "7.49",
+                    "restaurantId": 25
+                },
+                {
+                    "id": 169,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 25
+                }
+            ]
+        },
+        {
+            "restaurantId": 26,
+            "items": [
+                {
+                    "id": 170,
+                    "name": "Carrot Cake",
+                    "description": "A moist and flavorful carrot cake topped with cream cheese frosting.",
+                    "image": "CF-i1.avif",
+                    "price": "3.99",
+                    "restaurantId": 26
+                },
+                {
+                    "id": 171,
+                    "name": "Honey Cake",
+                    "description": "A sweet and rich honey cake with layers of honey and cream.",
+                    "image": "CF-i2.avif",
+                    "price": "4.49",
+                    "restaurantId": 26
+                },
+                {
+                    "id": 172,
+                    "name": "Apple strudel",
+                    "description": "A traditional apple strudel with a flaky pastry and spiced apple filling.",
+                    "image": "CF-i3.avif",
+                    "price": "3.49",
+                    "restaurantId": 26
+                },
+                {
+                    "id": 173,
+                    "name": "Kiev Cake",
+                    "description": "A rich and decadent cake made with layers of meringue, nuts, and cream.",
+                    "image": "CF-i4.avif",
+                    "price": "5.49",
+                    "restaurantId": 26
+                },
+                {
+                    "id": 174,
+                    "name": "Classic Cheesecake",
+                    "description": "A creamy and smooth cheesecake with a graham cracker crust.",
+                    "image": "CF-i5.avif",
+                    "price": "4.99",
+                    "restaurantId": 26
+                }
+            ]
+        },
+        {
+            "restaurantId": 27,
+            "items": [
+                {
+                    "id": 175,
+                    "name": "Chocolate Strawberry Crepe",
+                    "description": "A delicious crepe filled with chocolate and fresh strawberries, topped with whipped cream.",
+                    "image": "LaC-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 27
+                },
+                {
+                    "id": 176,
+                    "name": "Ham and Cheese Crepe",
+                    "description": "A savory crepe filled with ham and melted cheese, served with a side salad.",
+                    "image": "LaC-i2.avif",
+                    "price": "5.49",
+                    "restaurantId": 27
+                },
+                {
+                    "id": 177,
+                    "name": "Banana Nutella Crepe",
+                    "description": "A sweet crepe filled with banana slices and Nutella, topped with powdered sugar.",
+                    "image": "LaC-i3.avif",
+                    "price": "4.99",
+                    "restaurantId": 27
+                },
+                {
+                    "id": 178,
+                    "name": "Raspberry jam and cream crepe",
+                    "description": "A delightful crepe filled with raspberry jam and whipped cream, perfect for a sweet treat.",
+                    "image": "LaC-i4.avif",
+                    "price": "3.99",
+                    "restaurantId": 27
+                },
+                {
+                    "id": 179,
+                    "name": "Strawberry and cream crepe",
+                    "description": "A delicious crepe filled with fresh strawberries and whipped cream, perfect for a sweet treat.",
+                    "image": "LaC-i5.avif",
+                    "price": "3.99",
+                    "restaurantId": 27
+                }
+            ]
+        },
+        {
+            "restaurantId": 28,
+            "items": [
+                {
+                    "id": 180,
+                    "name": "Raspberry jam donut",
+                    "description": "A fluffy donut filled with raspberry jam and dusted with powdered sugar.",
+                    "image": "DD-i1.avif",
+                    "price": "1.99",
+                    "restaurantId": 28
+                },
+                {
+                    "id": 181,
+                    "name": "Tangerine cream donut",
+                    "description": "A delicious donut filled with tangerine cream and topped with a glaze.",
+                    "image": "DD-i2.avif",
+                    "price": "2.49",
+                    "restaurantId": 28
+                },
+                {
+                    "id": 182,
+                    "name": "Kinder chocolate donut",
+                    "description": "A sweet donut filled with Kinder chocolate cream and topped with chocolate glaze.",
+                    "image": "DD-i3.avif",
+                    "price": "2.99",
+                    "restaurantId": 28
+                },
+                {
+                    "id": 183,
+                    "name": "Oreo donut",
+                    "description": "A delicious donut topped with crushed Oreo cookies and a creamy glaze.",
+                    "image": "DD-i4.avif",
+                    "price": "2.49",
+                    "restaurantId": 28
+                },
+                {
+                    "id": 184,
+                    "name": "Bubble gum donut",
+                    "description": "A fun and colorful donut with a bubble gum flavor, perfect for kids.",
+                    "image": "DD-i5.avif",
+                    "price": "1.99",
+                    "restaurantId": 28
+                },
+                {
+                    "id": 185,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 28
+                }
+            ]
+        },
+        {
+            "restaurantId": 29,
+            "items": [
+                {
+                    "id": 186,
+                    "name": "Waffle with Berries",
+                    "description": "A delicious waffle topped with fresh berries and whipped cream.",
+                    "image": "BB-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 29
+                },
+                {
+                    "id": 187,
+                    "name": "Chocolate Strawberry Crepe",
+                    "description": "A delicious crepe filled with chocolate and fresh strawberries, topped with whipped cream.",
+                    "image": "LaC-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 29
+                },
+                {
+                    "id": 188,
+                    "name": "Honey Cake",
+                    "description": "A sweet and rich honey cake with layers of honey and cream.",
+                    "image": "CF-i2.avif",
+                    "price": "4.49",
+                    "restaurantId": 29
+                },
+                {
+                    "id": 189,
+                    "name": "Waffle with Banana",
+                    "description": "A delicious waffle topped with sliced bananas and a drizzle of honey.",
+                    "image": "WR-i3.avif",
+                    "price": "4.99",
+                    "restaurantId": 29
+                },
+                {
+                    "id": 190,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 29
+                },
+                {
+                    "id": 191,
+                    "name": "Cold cappuccino",
+                    "description": "A refreshing cold cappuccino made with espresso and chilled milk.",
+                    "image": "coffee-i3.avif",
+                    "price": "3.99",
+                    "restaurantId": 29
+                }
+            ]
+        },
+        {
+            "restaurantId": 30,
+            "items": [
+                {
+                    "id": 192,
+                    "name": "Caramel macaroon",
+                    "description": "A sweet and chewy caramel macaroon, perfect for a snack.",
+                    "image": "MM-i1.avif",
+                    "price": "1.99",
+                    "restaurantId": 30
+                },
+                {
+                    "id": 193,
+                    "name": "Lavander macaroon",
+                    "description": "A fragrant lavender macaroon, perfect for a unique treat.",
+                    "image": "MM-i2.avif",
+                    "price": "2.49",
+                    "restaurantId": 30
+                },
+                {
+                    "id": 194,
+                    "name": "Pistachio croissant",
+                    "description": "A delightful croissant filled with pistachio cream, perfect for a sweet treat.",
+                    "image": "MM-i3.avif",
+                    "price": "3.49",
+                    "restaurantId": 30
+                },
+                {
+                    "id": 195,
+                    "name": "Straberry macaroon",
+                    "description": "A sweet and fruity strawberry macaroon, perfect for a snack.",
+                    "image": "MM-i4.avif",
+                    "price": "2.49",
+                    "restaurantId": 30
+                },
+                {
+                    "id": 196,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and steamed milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 30
+                }
+            ]
+        },
+        {
+            "restaurantId": 31,
+            "items": [
+                {
+                    "id": 197,
+                    "name": "Avocado Toast",
+                    "description": "A healthy avocado toast topped with cherry tomatoes and a sprinkle of salt.",
+                    "image": "HT-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 31
+                },
+                {
+                    "id": 198,
+                    "name": "Hummus",
+                    "description": "A creamy hummus served with pita bread and fresh vegetables.",
+                    "image": "HT-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 31
+                },
+                {
+                    "id": 199,
+                    "name": "Eggplant sandwich",
+                    "description": "A delicious sandwich with grilled eggplant, cheese, lettuce, and tomatoes on a fresh baguette.",
+                    "image": "CoCo-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 31
+                },
+                {
+                    "id": 200,
+                    "name": "Green salad with walnuts",
+                    "description": "A fresh green salad with walnuts and a light vinaigrette.",
+                    "image": "HT-i3.avif",
+                    "price": "4.49",
+                    "restaurantId": 31
+                },
+                {
+                    "id": 201,
+                    "name": "Vegan Wrap",
+                    "description": "A healthy vegan wrap filled with fresh vegetables and hummus.",
+                    "image": "HT-i4.avif",
+                    "price": "5.49",
+                    "restaurantId": 31
+                },
+                {
+                    "id": 202,
+                    "name": "Cappuccino",
+                    "description": "A shot of espresso topped with oat milk",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 31
+                },
+                {
+                    "id": 203,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 31
+                }
+            ]
+        },
+        {
+            "restaurantId": 32,
+            "items": [
+                {
+                    "id": 204,
+                    "name": "Falafel Wrap Standard",
+                    "description": "A classic falafel wrap with lettuce, tomatoes, and tahini sauce.",
+                    "image": "FO-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 32
+                },
+                {
+                    "id": 205,
+                    "name": "Falafel Wrap Large",
+                    "description": "A larger version of our classic falafel wrap with extra falafel and vegetables.",
+                    "image": "FO-i1.avif",
+                    "price": "7.49",
+                    "restaurantId": 32
+                },
+                {
+                    "id": 206,
+                    "name": "Falafel Combo",
+                    "description": "Falafel balls served with pita bread, hummus, and a side salad.",
+                    "image": "FO-i2.avif",
+                    "price": "8.99",
+                    "restaurantId": 32
+                },
+                {
+                    "id": 207,
+                    "name": "Hummus with mushrooms",
+                    "description": "A creamy hummus topped with sautéed mushrooms, served with pita bread.",
+                    "image": "FO-i3.avif",
+                    "price": "6.49",
+                    "restaurantId": 32
+                },
+                {
+                    "id": 208,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 32
+                },
+                {
+                    "id": 209,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and oat milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 32
+                }
+            ]
+        },
+        {
+            "restaurantId": 33,
+            "items": [
+                {
+                    "id": 210,
+                    "name": "Falafel Wrap Standard",
+                    "description": "A classic falafel wrap with lettuce, tomatoes, and tahini sauce.",
+                    "image": "FO-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 33
+                },
+                {
+                    "id": 211,
+                    "name": "Tofu wrap",
+                    "description": "A healthy wrap filled with marinated tofu, fresh vegetables, and a tangy sauce.",
+                    "image": "VW-i1.avif",
+                    "price": "6.49",
+                    "restaurantId": 33
+                },
+                {
+                    "id": 212,
+                    "name": "Falafel Wrap with hummus sauce",
+                    "description": "A delicious falafel wrap with a creamy hummus sauce, lettuce, and tomatoes.",
+                    "image": "VW-i2.avif",
+                    "price": "6.99",
+                    "restaurantId": 33
+                },
+                {
+                    "id": 213,
+                    "name": "Cheesy vegetarian wrap",
+                    "description": "A cheesy vegetarian wrap with grilled vegetables, cheese, and a tangy sauce.",
+                    "image": "VW-i3.avif",
+                    "price": "7.49",
+                    "restaurantId": 33
+                },
+                {
+                    "id": 214,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 33
+                },
+                {
+                    "id": 215,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and oat milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 33
+                }
+            ]
+        },
+        {
+            "restaurantId": 34,
+            "items": [
+                {
+                    "id": 216,
+                    "name": "Falafel Wrap Standard",
+                    "description": "A classic falafel wrap with lettuce, tomatoes, and tahini sauce.",
+                    "image": "FO-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 34
+                },
+                {
+                    "id": 217,
+                    "name": "Falafel Wrap Large",
+                    "description": "A larger version of our classic falafel wrap with extra falafel and vegetables.",
+                    "image": "FO-i1.avif",
+                    "price": "7.49",
+                    "restaurantId": 34
+                },
+                {
+                    "id": 218,
+                    "name": "Falafel Wrap XL",
+                    "description": "An extra-large falafel wrap with double the falafel and vegetables.",
+                    "image": "FO-i1.avif",
+                    "price": "8.99",
+                    "restaurantId": 34
+                },
+                {
+                    "id": 219,
+                    "name": "Falafel burger",
+                    "description": "A delicious falafel burger served with lettuce, tomatoes, and a tangy sauce on a toasted bun.",
+                    "image": "KF-i1.avif",
+                    "price": "6.99",
+                    "restaurantId": 34
+                }
+            ]
+        },
+        {
+            "restaurantId": 35,
+            "items": [
+                {
+                    "id": 220,
+                    "name": "Falafel in Pita",
+                    "description": "A classic falafel wrap with lettuce, tomatoes, and tahini sauce in a warm pita bread.",
+                    "image": "BC-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 35
+                },
+                {
+                    "id": 221,
+                    "name": "Falafel in Pita Large",
+                    "description": "A larger version of our classic falafel wrap with extra falafel and vegetables in a warm pita bread.",
+                    "image": "BC-i1.avif",
+                    "price": "7.49",
+                    "restaurantId": 35
+                },
+                {
+                    "id": 222,
+                    "name": "Falafel in Pita XL",
+                    "description": "An extra-large falafel wrap with double the falafel and vegetables in a warm pita bread.",
+                    "image": "BC-i1.avif",
+                    "price": "8.99",
+                    "restaurantId": 35
+                },
+                {
+                    "id": 223,
+                    "name": "Classic hummus",
+                    "description": "A creamy hummus served with pita bread and a drizzle of olive oil.",
+                    "image": "HT-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 35
+                },
+                {
+                    "id": 224,
+                    "name": "Hummus with mushrooms",
+                    "description": "A creamy hummus topped with sautéed mushrooms, served with pita bread.",
+                    "image": "FO-i3.avif",
+                    "price": "6.49",
+                    "restaurantId": 35
+                }
+            ]
+        },
+        {
+            "restaurantId": 36,
+            "items": [
+                {
+                    "id": 225,
+                    "name": "Avocado Toast",
+                    "description": "A healthy avocado toast topped with cherry tomatoes and a sprinkle of salt.",
+                    "image": "HT-i1.avif",
+                    "price": "4.99",
+                    "restaurantId": 36
+                },
+                {
+                    "id": 226,
+                    "name": "Falafel burger",
+                    "description": "A delicious falafel burger served with lettuce, tomatoes, and a tangy sauce on a toasted bun.",
+                    "image": "KF-i1.avif",
+                    "price": "6.99",
+                    "restaurantId": 36
+                },
+                {
+                    "id": 227,
+                    "name": "Eggplant sandwich",
+                    "description": "A delicious sandwich with grilled eggplant, cheese, lettuce, and tomatoes on a fresh baguette.",
+                    "image": "CoCo-i1.avif",
+                    "price": "5.99",
+                    "restaurantId": 36
+                },
+                {
+                    "id": 228,
+                    "name": "Tofu wrap",
+                    "description": "A healthy wrap filled with marinated tofu, fresh vegetables, and a tangy sauce.",
+                    "image": "VW-i1.avif",
+                    "price": "6.49",
+                    "restaurantId": 36
+                },
+                {
+                    "id": 229,
+                    "name": "Cappuccino",
+                    "description": "A creamy cappuccino made with espresso and oat milk.",
+                    "image": "coffee-i2.avif",
+                    "price": "3.49",
+                    "restaurantId": 36
+                },
+                {
+                    "id": 230,
+                    "name": "Espresso",
+                    "description": "A strong and rich espresso, perfect for a morning boost.",
+                    "image": "coffee-i1.avif",
+                    "price": "2.49",
+                    "restaurantId": 36
+                }
+            ]
         }
     ]
 }

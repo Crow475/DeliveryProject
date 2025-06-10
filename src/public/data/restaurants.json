@@ -179,6 +179,186 @@
             "deliveryPrice": "0.00",
             "rating": "8.4",
             "link": "/restaurant/#id=18"
+        },
+        {
+            "id": 19,
+            "categoryId": 3,
+            "name": "Sunny Side Up",
+            "description": "Breakfast diner with a sunny atmosphere",
+            "image": "SSU-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.9",
+            "link": "/restaurant/#id=19"
+        },
+        {
+            "id": 20,
+            "categoryId": 3,
+            "name": "Breakfast Studio",
+            "description": "Modern breakfast spot with a creative menu",
+            "image": "BS-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "9.2",
+            "link": "/restaurant/#id=20"
+        },
+        {
+            "id": 21,
+            "categoryId": 3,
+            "name": "Daily grind",
+            "description": "Coffee shop with a focus on breakfast",
+            "image": "DG-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.6",
+            "link": "/restaurant/#id=21"
+        },
+        {
+            "id": 22,
+            "categoryId": 3,
+            "name": "Brekfast Box",
+            "description": "Quick breakfast options for busy mornings",
+            "image": "BB-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.3",
+            "link": "/restaurant/#id=22"
+        },
+        {
+            "id": 23,
+            "categoryId": 3,
+            "name": "Cafe Couture",
+            "description": "Stylish cafe with gourmet breakfast options",
+            "image": "CaCo-Logo.webp",
+            "deliveryPrice": "0.99",
+            "rating": "9.4",
+            "link": "/restaurant/#id=23"
+        },
+        {
+            "id": 24,
+            "categoryId": 3,
+            "name": "Coffe Corner",
+            "description": "Cozy coffee shop with a breakfast menu",
+            "image": "CoCo-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "7.8",
+            "link": "/restaurant/#id=24"
+        },
+        {
+            "id": 25,
+            "categoryId": 6,
+            "name": "Waffle Royale",
+            "description": "Gourmet waffles with a royal touch",
+            "image": "WR-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.9",
+            "link": "/restaurant/#id=25"
+        },
+        {
+            "id": 26,
+            "categoryId": 6,
+            "name": "Cake factory",
+            "description": "Factory of delicious cakes",
+            "image": "CF-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.1",
+            "link": "/restaurant/#id=26"
+        },
+        {
+            "id": 27,
+            "categoryId": 6,
+            "name": "La Crepe",
+            "description": "French crepes with a twist",
+            "image": "LaC-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "9.0",
+            "link": "/restaurant/#id=27"
+        },
+        {
+            "id": 28,
+            "categoryId": 6,
+            "name": "Donut Delights",
+            "description": "Delicious donuts for every taste",
+            "image": "DD-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.5",
+            "link": "/restaurant/#id=28"
+        },
+        {
+            "id": 29,
+            "categoryId": 6,
+            "name": "The Sweet Spot",
+            "description": "A variety of sweet treats and desserts",
+            "image": "TSS-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.7",
+            "link": "/restaurant/#id=29"
+        },
+        {
+            "id": 30,
+            "categoryId": 6,
+            "name": "Macaroon Magic",
+            "description": "Specializing in macarons and other sweets",
+            "image": "MM-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.2",
+            "link": "/restaurant/#id=30"
+        },
+        {
+            "id": 31,
+            "categoryId": 4,
+            "name": "Harvest Table",
+            "description": "Farm-to-table restaurant with fresh ingredients",
+            "image": "HT-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "9.1",
+            "link": "/restaurant/#id=31"
+        },
+        {
+            "id": 32,
+            "categoryId": 4,
+            "name": "Falafel Oasis",
+            "description": "Middle Eastern cuisine with a focus on falafel",
+            "image": "FO-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.4",
+            "link": "/restaurant/#id=32"
+        },
+        {
+            "id": 33,
+            "categoryId": 4,
+            "name": "Vegan Wraps",
+            "description": "Healthy vegan wraps and bowls",
+            "image": "VW-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.6",
+            "link": "/restaurant/#id=33"
+        },
+        {
+            "id": 34,
+            "categoryId": 4,
+            "name": "King Falafel",
+            "description": "Authentic falafel and Middle Eastern dishes",
+            "image": "KF-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.3",
+            "link": "/restaurant/#id=34"
+        },
+        {
+            "id": 35,
+            "categoryId": 4,
+            "name": "Bloom cafe",
+            "description": "Cafe with a focus on fresh, healthy meals",
+            "image": "BC-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.8",
+            "link": "/restaurant/#id=35"
+        },
+        {
+            "id": 36,
+            "categoryId": 4,
+            "name": "Green Plate",
+            "description": "Vegetarian and vegan-friendly restaurant",
+            "image": "GP-Logo.webp",
+            "deliveryPrice": "0.00",
+            "rating": "8.5",
+            "link": "/restaurant/#id=36"
         }
     ]
 }
