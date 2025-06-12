@@ -9,6 +9,11 @@
             "code": "WELCOME50",
             "name": "50% off on your first order",
             "percentage": 50
+        },
+        {
+            "code": "PIDJ100",
+            "name": "why not 100% off?",
+            "percentage": 100
         }
     ]
 }
