@@ -27,17 +27,39 @@
                         All restaurants
                     </h1>
                     <div
-                        class="mt-8 flex flex-row items-center justify-start space-x-2"
+                        class="mt-8 flex flex-col items-start justify-start space-y-2 space-x-0 rounded-2xl border-2 border-neutral-500 p-4 md:flex-row md:items-center md:space-y-0 md:space-x-4"
                     >
-                        <span class="text-lg md:text-xl"> Sort by: </span>
-                        <select
-                            name="sort"
-                            id="sort"
-                            class="cursor-pointer rounded-lg border-2 border-neutral-400 bg-neutral-100 p-1 text-sm dark:bg-neutral-800 dark:text-white"
+                        <div class="flex flex-row items-center space-x-2">
+                            <span class="text-md md:text-lg"> Sort by: </span>
+                            <select
+                                name="sort"
+                                id="sort"
+                                class="cursor-pointer rounded-lg border-2 border-neutral-400 bg-neutral-100 p-1 text-sm dark:bg-neutral-800 dark:text-white"
+                            >
+                                <option value="name">Name</option>
+                                <option value="rating">Rating</option>
+                            </select>
+                        </div>
+                        <label
+                            class="flex cursor-pointer flex-row items-center justify-start space-x-2"
                         >
-                            <option value="name">Name</option>
-                            <option value="rating">Rating</option>
-                        </select>
+                            <span class="text-md md:text-lg">
+                                Free Delivery:
+                            </span>
+                            <input
+                                type="checkbox"
+                                id="freeDelivery"
+                                class="rounded-lg border-2 border-neutral-400 bg-neutral-100 p-1 text-sm accent-orange-600 dark:bg-neutral-800 dark:text-white"
+                            />
+                        </label>
+                        <div class="flex flex-row items-center space-x-2">
+                            <span class="text-md md:text-lg"> Category: </span>
+                            <select
+                                name="category"
+                                id="category"
+                                class="cursor-pointer rounded-lg border-2 border-neutral-400 bg-neutral-100 p-1 text-sm dark:bg-neutral-800 dark:text-white"
+                            ></select>
+                        </div>
                     </div>
                     <div
                         class="my-4 grid grid-cols-2 gap-4 md:grid-cols-6"
